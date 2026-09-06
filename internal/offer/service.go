@@ -1,51 +1,5 @@
 package offer
 
-<<<<<<< HEAD
-import "errors"
-
-type Service struct {
-	repo Repository
-}
-
-type CreateInput struct {
-	ListingID uint    `json:"listing_id"`
-	Price     float64 `json:"price"`
-	Quantity  float64 `json:"quantity"`
-	Message   string  `json:"message"`
-}
-
-type RespondInput struct {
-	Action string `json:"action"`
-}
-
-func NewService(repo Repository) *Service {
-	return &Service{repo: repo}
-}
-
-func (s *Service) CreateOffer(buyerID, farmerID uint, input CreateInput) (*Offer, error) {
-	if input.ListingID == 0 {
-		return nil, errors.New("listing_id is required")
-	}
-	if input.Price <= 0 {
-		return nil, errors.New("price must be greater than zero")
-	}
-	if input.Quantity <= 0 {
-		return nil, errors.New("quantity must be greater than zero")
-	}
-
-	offer := &Offer{
-		ListingID: input.ListingID,
-		FarmerID:  farmerID,
-		BuyerID:   buyerID,
-		Price:     input.Price,
-		Quantity:  input.Quantity,
-		Message:   input.Message,
-		Status:    "PENDING",
-	}
-
-	if err := s.repo.Create(offer); err != nil {
-		return nil, err
-=======
 import (
 	"errors"
 	"fmt"
@@ -75,11 +29,15 @@ type Service interface {
 
 	GetOffer(id uint) (*Offer, error)
 
-	GetBuyerOffers(buyerID uint) ([]Offer, error)
+	GetBuyerOffers(buyerID uint) ([]OfferView, error)
+
+	GetFarmerOffers(farmerID uint) ([]OfferView, error)
 
 	GetListingOffers(listingID uint) ([]Offer, error)
 
 	CancelOffer(offerID uint, buyerID uint) error
+
+	RejectOffer(offerID uint, farmerID uint) error
 }
 
 type service struct {
@@ -150,50 +108,11 @@ func (s *service) CreateOffer(
 
 	if err := s.repo.Create(offer); err != nil {
 		return nil, fmt.Errorf("create offer: %w", err)
->>>>>>> tmp-pr-merge
 	}
 
 	return offer, nil
 }
 
-<<<<<<< HEAD
-func (s *Service) GetBuyerOffers(buyerID uint) ([]Offer, error) {
-	return s.repo.FindByBuyer(buyerID)
-}
-
-func (s *Service) GetFarmerOffers(farmerID uint) ([]Offer, error) {
-	return s.repo.FindByFarmer(farmerID)
-}
-
-func (s *Service) GetListingOffers(listingID uint) ([]Offer, error) {
-	return s.repo.FindByListing(listingID)
-}
-
-func (s *Service) RespondOffer(farmerID, offerID uint, input RespondInput) (*Offer, error) {
-	offer, err := s.repo.FindByID(offerID)
-	if err != nil {
-		return nil, errors.New("offer not found")
-	}
-
-	if offer.FarmerID != farmerID {
-		return nil, errors.New("unauthorized: only the listing owner can respond")
-	}
-
-	switch input.Action {
-	case "ACCEPT":
-		offer.Status = "ACCEPTED"
-	case "REJECT":
-		offer.Status = "REJECTED"
-	default:
-		return nil, errors.New("action must be ACCEPT or REJECT")
-	}
-
-	if err := s.repo.Update(offer); err != nil {
-		return nil, err
-	}
-
-	return offer, nil
-=======
 func (s *service) GetOffer(id uint) (*Offer, error) {
 	offer, err := s.repo.FindByID(id)
 	if err != nil {
@@ -207,8 +126,12 @@ func (s *service) GetOffer(id uint) (*Offer, error) {
 	return offer, nil
 }
 
-func (s *service) GetBuyerOffers(buyerID uint) ([]Offer, error) {
+func (s *service) GetBuyerOffers(buyerID uint) ([]OfferView, error) {
 	return s.repo.FindByBuyer(buyerID)
+}
+
+func (s *service) GetFarmerOffers(farmerID uint) ([]OfferView, error) {
+	return s.repo.FindByFarmer(farmerID)
 }
 
 func (s *service) GetListingOffers(listingID uint) ([]Offer, error) {
@@ -240,5 +163,49 @@ func (s *service) CancelOffer(offerID uint, buyerID uint) error {
 	}
 
 	return nil
->>>>>>> tmp-pr-merge
+}
+
+func (s *service) RejectOffer(offerID uint, farmerID uint) error {
+	offer, err := s.repo.FindByID(offerID)
+	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			return ErrOfferNotFound
+		}
+
+		return fmt.Errorf("find offer: %w", err)
+	}
+
+	var listing struct {
+		FarmerID uint
+	}
+
+	err = s.db.
+		Table("crop_listings").
+		Select("farmer_id").
+		Where("id = ?", offer.ListingID).
+		First(&listing).Error
+
+	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			return ErrListingNotFound
+		}
+
+		return fmt.Errorf("find listing: %w", err)
+	}
+
+	if listing.FarmerID != farmerID {
+		return ErrUnauthorized
+	}
+
+	if offer.Status != "PENDING" {
+		return ErrInvalidStatus
+	}
+
+	offer.Status = "REJECTED"
+
+	if err := s.repo.Update(offer); err != nil {
+		return fmt.Errorf("reject offer: %w", err)
+	}
+
+	return nil
 }

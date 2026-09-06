@@ -35,6 +35,14 @@
     </div>
 
     <main class="auth-outer relative z-10 py-10 sm:py-14">
+      <!-- LANGUAGE SWITCHER -->
+      <div class="flex justify-center mb-5">
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="hi">हिन्दी</button>
+        </div>
+      </div>
+
       <div class="text-center mb-7 sm:mb-8">
         <div class="flex justify-center mb-4">
           <img
@@ -46,10 +54,11 @@
         <h1
           id="loginBrand"
           class="brand-name text-[32px] md:text-[44px] leading-tight font-bold mb-2 transition-colors duration-500"
+          data-i18n="brandName"
         >
           KrishiSetu
         </h1>
-        <p class="text-base leading-relaxed text-[#40493D]">
+        <p class="text-base leading-relaxed text-[#40493D]" data-i18n="brandTagline">
           Agriculture Simplified
         </p>
       </div>
@@ -63,15 +72,17 @@
             id="loginFarmerTab"
             type="button"
             class="role-tab active flex-1 py-4 px-3 text-center text-sm font-bold transition-all duration-200"
+            data-i18n="farmerTab"
           >
-            Farmer
+            🌾 Farmer
           </button>
           <button
             id="loginBuyerTab"
             type="button"
             class="role-tab flex-1 py-4 px-3 text-center text-sm font-medium transition-all duration-200"
+            data-i18n="buyerTab"
           >
-            Buyer
+            🛒 Buyer
           </button>
         </div>
 
@@ -79,6 +90,7 @@
           <h2
             id="loginTitle"
             class="auth-title font-semibold text-[#181D17] mb-6"
+            data-i18n="farmerLogin"
           >
             Farmer Login
           </h2>
@@ -88,21 +100,28 @@
               <label
                 for="farmerPhone"
                 class="block text-sm font-medium text-[#181D17] mb-1"
+                data-i18n="phone"
                 >Phone Number</label
               >
-              <input
-                id="farmerPhone"
-                type="tel" 
-                maxlength="10"
-                placeholder="Enter phone number"
-                required
-                class="w-full h-12 px-4 rounded-xl border border-[#BFCABA] outline-none focus:ring-2 focus:ring-[#0D631B]/20 transition-all"
-              />
+              <div class="phone-prefix-wrapper">
+                <span class="phone-prefix-tag">🇮🇳 +91</span>
+                <input
+                  id="farmerPhone"
+                  type="tel" 
+                  maxlength="10"
+                  inputmode="numeric"
+                  placeholder="Enter 10-digit number"
+                  data-i18n-placeholder="enterPhone"
+                  required
+                  class="w-full h-12 phone-input-padded rounded-xl border border-[#BFCABA] outline-none focus:ring-2 focus:ring-[#0D631B]/20 transition-all text-sm font-medium"
+                />
+              </div>
             </div>
             <div>
               <label
                 for="farmerPassword"
                 class="block text-sm font-medium text-[#181D17] mb-1"
+                data-i18n="password"
                 >Password</label
               >
               <div class="password-wrap">
@@ -110,6 +129,7 @@
                   id="farmerPassword"
                   type="password"
                   placeholder="Enter password"
+                  data-i18n-placeholder="enterPassword"
                   required
                   class="w-full h-12 px-4 rounded-xl border border-[#BFCABA] outline-none focus:ring-2 focus:ring-[#0D631B]/20 transition-all"
                 />
@@ -126,6 +146,7 @@
             <button
               type="submit"
               class="login-submit w-full h-12 bg-gradient-to-r from-[#0D631B] to-[#2E9E4F] text-white font-bold rounded-xl shadow-sm transition-all"
+              data-i18n="loginAsFarmer"
             >
               Login as Farmer
             </button>
@@ -136,12 +157,14 @@
               <label
                 for="buyerPhone"
                 class="block text-sm font-medium text-[#181D17] mb-1"
+                data-i18n="phoneOrEmail"
                 >Phone / Email</label
               >
               <input
                 id="buyerPhone"
                 type="text"
                 placeholder="Enter phone or email"
+                data-i18n-placeholder="enterPhoneOrEmail"
                 required
                 class="w-full h-12 px-4 rounded-xl border border-[#BFCABA] outline-none focus:ring-2 focus:ring-[#75584D]/20 transition-all"
               />
@@ -150,6 +173,7 @@
               <label
                 for="buyerPassword"
                 class="block text-sm font-medium text-[#181D17] mb-1"
+                data-i18n="password"
                 >Password</label
               >
               <div class="password-wrap">
@@ -157,6 +181,7 @@
                   id="buyerPassword"
                   type="password"
                   placeholder="Enter password"
+                  data-i18n-placeholder="enterPassword"
                   required
                   class="w-full h-12 px-4 rounded-xl border border-[#BFCABA] outline-none focus:ring-2 focus:ring-[#75584D]/20 transition-all"
                 />
@@ -173,17 +198,19 @@
             <button
               type="submit"
               class="login-submit w-full h-12 bg-gradient-to-r from-[#75584D] to-[#9b7b6c] text-white font-bold rounded-xl shadow-sm transition-all"
+              data-i18n="loginAsBuyer"
             >
               Login as Buyer
             </button>
           </form>
 
           <div class="mt-6 text-center text-sm text-[#40493D]">
-            <span>Don't have an account? </span>
+            <span data-i18n="dontHaveAccount">Don't have an account? </span>
             <a
               id="loginRegisterLink"
               href="./register.html?role=farmer"
               class="font-bold text-[#0D631B] hover:underline"
+              data-i18n="register"
               >Register</a
             >
           </div>

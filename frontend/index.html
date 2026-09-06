@@ -8,8 +8,14 @@
     <meta name="description" content="KrishiSetu is a free digital marketplace connecting Indian farmers directly with verified buyers for transparent agricultural trade." />
     <link rel="stylesheet" href="./output.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-[#FAFAF5] text-[#1E1E1E]">
+  <body class="bg-[#F4F8F0] text-[#1C241B] font-['Inter']">
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar-shell sticky top-0 z-50 w-full">
       <div
@@ -29,23 +35,29 @@
 
         <!-- DESKTOP NAVIGATION -->
         <div class="hidden lg:flex items-center gap-5 xl:gap-6">
-          <a href="./index.html" class="nav-link is-active">Home</a>
-          <a href="#how-it-works" class="nav-link">How It Works</a>
-          <a href="#farmers" class="nav-link">For Farmers</a>
-          <a href="#buyers" class="nav-link">For Buyers</a>
-          <a href="#market-prices" class="nav-link">Market Prices</a>
+          <a href="./index.html" class="nav-link is-active" data-i18n="home">Home</a>
+          <a href="#how-it-works" class="nav-link" data-i18n="howItWorks">How It Works</a>
+          <a href="#farmers" class="nav-link" data-i18n="forFarmers">For Farmers</a>
+          <a href="#buyers" class="nav-link" data-i18n="forBuyers">For Buyers</a>
+          <a href="#reported-prices" class="nav-link" data-i18n="marketPrices">Market Prices</a>
         </div>
 
-        <!-- ACTION BUTTONS -->
-        <div class="flex items-center gap-1 sm:gap-2 shrink-0">
+        <!-- ACTION BUTTONS & LANGUAGE SWITCHER -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div class="lang-switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="hi">हिन्दी</button>
+          </div>
           <a
             href="./login.html"
             class="action-link text-[#0D631B] font-medium px-3 sm:px-4 py-2 rounded-md"
+            data-i18n="login"
             >Login</a
           >
           <a
             href="./register.html"
             class="action-button bg-[#0D631B] text-white font-semibold px-4 sm:px-5 py-2.5 rounded-md shadow-sm"
+            data-i18n="register"
             >Register</a
           >
         </div>
@@ -71,34 +83,32 @@
         <div class="hero-chip chip1">
           <span class="text-xl">🌾</span>
           <div>
-            <div class="font-bold text-[#1E1E1E] leading-tight">2,400+</div>
-            <div class="text-sm text-[#40493D]">Active Listings</div>
+            <div class="font-bold text-[#1E1E1E] leading-tight" data-i18n="activeListingsCount">2,400+ Active Listings</div>
           </div>
         </div>
         <div class="hero-chip chip2">
           <span class="text-xl">📈</span>
           <div>
-            <div class="font-bold text-[#1E1E1E] leading-tight">
-              Wheat ₹2,350/q
-            </div>
-            <div class="text-sm text-[#40493D]">Today's Mandi Price</div>
+            <div class="font-bold text-[#1E1E1E] leading-tight" data-i18n="wheatPriceQ">Wheat ₹2,350/q</div>
           </div>
         </div>
 
         <div
-          class="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center flex flex-col items-center gap-6 md:gap-7 py-12"
+          class="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center flex flex-col items-center gap-6 md:gap-8 py-14"
         >
-          <span class="empower-badge"
+          <span class="empower-badge" data-i18n="taglineFull"
             >🌾 Trusted by Farmers & Buyers across India</span
           >
           <h1
-            class="gradient-heading text-4xl md:text-[44px] leading-tight font-bold tracking-tight"
+            class="gradient-heading text-4xl md:text-[48px] leading-[1.12] font-extrabold tracking-tight"
+            data-i18n="heroTitle"
           >
             Connect Your Produce <br class="hidden sm:block" />
             With The Right Buyer.
           </h1>
           <p
-            class="max-w-2xl text-base md:text-lg leading-relaxed text-[#40493D]"
+            class="max-w-2xl text-base md:text-lg leading-relaxed text-[#40493D] font-medium"
+            data-i18n="heroDesc"
           >
             KrishiSetu helps farmers discover buyers, manage offers and
             understand agricultural market prices — all in one simple platform.
@@ -106,13 +116,15 @@
           <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
             <a
               href="./login.html?role=farmer"
-              class="cta-button farmer-cta bg-gradient-to-r from-[#0D631B] to-[#2E9E4F] text-white font-semibold px-8 py-4 rounded-xl w-full sm:w-48 text-center shadow-lg"
+              class="cta-button farmer-cta bg-gradient-to-r from-[#0D631B] to-[#2E9E4F] text-white font-bold px-8 py-4 rounded-xl w-full sm:w-52 text-center shadow-lg text-[15px]"
+              data-i18n="imFarmer"
             >
               🌾 I'm a Farmer!
             </a>
             <a
               href="./login.html?role=buyer"
-              class="cta-button buyer-cta bg-gradient-to-r from-[#75584D] to-[#9b7b6c] text-white font-semibold px-8 py-4 rounded-xl w-full sm:w-48 text-center shadow-lg"
+              class="cta-button buyer-cta bg-gradient-to-r from-[#75584D] to-[#9b7b6c] text-white font-bold px-8 py-4 rounded-xl w-full sm:w-52 text-center shadow-lg text-[15px]"
+              data-i18n="imBuyer"
             >
               🛒 I'm a Buyer!
             </a>
@@ -125,19 +137,19 @@
         <div class="max-w-7xl mx-auto hero-stats hero-stats-grid">
           <div class="text-center">
             <div class="hero-stat-value">12K+</div>
-            <div class="hero-stat-label">Registered Farmers</div>
+            <div class="hero-stat-label" data-i18n="registeredFarmers">Registered Farmers</div>
           </div>
           <div class="text-center">
             <div class="hero-stat-value">5.2K+</div>
-            <div class="hero-stat-label">Verified Buyers</div>
+            <div class="hero-stat-label" data-i18n="verifiedBuyers">Verified Buyers</div>
           </div>
           <div class="text-center">
             <div class="hero-stat-value">50+</div>
-            <div class="hero-stat-label">Mandi Prices Live</div>
+            <div class="hero-stat-label" data-i18n="commoditiesTracked">Commodities Tracked</div>
           </div>
           <div class="text-center">
             <div class="hero-stat-value gradient-heading">₹38 Cr</div>
-            <div class="hero-stat-label font-semibold">Transactions Done</div>
+            <div class="hero-stat-label font-semibold" data-i18n="transactionsDone">Transactions Done</div>
           </div>
         </div>
       </section>
@@ -152,13 +164,14 @@
 
         <div class="relative max-w-7xl mx-auto">
           <div class="text-center mb-12">
-            <span class="empower-badge">🌱 Empowering Agriculture</span>
+            <span class="empower-badge" data-i18n="empoweringAgriBadge">🌱 Empowering Agriculture</span>
             <h2
               class="gradient-heading text-2xl md:text-3xl font-semibold mt-5 mb-4"
+              data-i18n="empoweringAgriTitle"
             >
               Empowering Ground Level Operations
             </h2>
-            <p class="max-w-2xl mx-auto text-[#40493D]">
+            <p class="max-w-2xl mx-auto text-[#40493D]" data-i18n="empoweringAgriDesc">
               A robust platform designed for utility and reliability in the
               agricultural ecosystem.
             </p>
@@ -181,10 +194,10 @@
               >
                 🔎
               </div>
-              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3">
+              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3" data-i18n="discoveryNetwork">
                 Discovery Network
               </h3>
-              <p class="text-sm leading-relaxed text-[#40493D]">
+              <p class="text-sm leading-relaxed text-[#40493D]" data-i18n="discoveryNetworkDesc">
                 Seamlessly find verified buyers and local farmers in your
                 region. Our network bridges the gap between produce and demand
                 efficiently.
@@ -207,10 +220,10 @@
               >
                 🤝
               </div>
-              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3">
+              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3" data-i18n="offerManagement">
                 Offer Management
               </h3>
-              <p class="text-sm leading-relaxed text-[#40493D]">
+              <p class="text-sm leading-relaxed text-[#40493D]" data-i18n="offerManagementDesc">
                 Negotiate and manage deals transparently. Keep track of active,
                 pending and completed transactions in one organized dashboard.
               </p>
@@ -232,17 +245,44 @@
               >
                 📈
               </div>
-              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3">
+              <h3 class="text-lg font-semibold text-[#1E1E1E] mb-3" data-i18n="marketPrices">
                 Market Prices
               </h3>
-              <p class="text-sm leading-relaxed text-[#40493D]">
-                Access real-time commodity pricing across different mandis. Make
-                informed decisions based on current agricultural market trends.
+              <p class="text-sm leading-relaxed text-[#40493D]" data-i18n="marketPricesDesc">
+                See the latest reported commodity prices across different mandis.
+                Make informed decisions based on the most recent agricultural
+                market reports.
               </p>
             </div>
           </div>
         </div>
       </section>
+      <!-- LATEST REPORTED MARKET PRICES -->
+      <section
+        id="reported-prices"
+        class="empower-section w-full px-4 md:px-8 py-16 md:py-20"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+            <div>
+              <span class="empower-badge" data-i18n="latestReportedPrices">📈 Latest Reported Mandi Prices</span>
+              <h2
+                class="gradient-heading text-2xl md:text-3xl font-semibold mt-4"
+                data-i18n="pricesLangTitle"
+              >
+                Know What Farmers Are Being Paid
+              </h2>
+              <p class="max-w-xl text-sm text-[#40493D] mt-2" data-i18n="pricesLangDesc">
+                Prices below are the latest figures reported by mandis. They
+                reflect reporting data, not live transactions.
+              </p>
+            </div>
+          </div>
+          <div
+            id="marketPriceGrid"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <!-- Populated via script.js -->
 
       <!-- ================= FOR FARMERS ================= -->
       <section
@@ -487,21 +527,25 @@
           <a
             href="#"
             class="footer-link text-[#40493D] hover:text-[#0D631B] transition-colors"
+            data-i18n="aboutUs"
             >About Us</a
           >
           <a
             href="#"
             class="footer-link text-[#40493D] hover:text-[#0D631B] transition-colors"
+            data-i18n="contactSupport"
             >Contact Support</a
           >
           <a
             href="#"
             class="footer-link text-[#40493D] hover:text-[#0D631B] transition-colors"
+            data-i18n="privacyPolicy"
             >Privacy Policy</a
           >
           <a
             href="#"
             class="footer-link text-[#40493D] hover:text-[#0D631B] transition-colors"
+            data-i18n="termsOfService"
             >Terms of Service</a
           >
         </div>

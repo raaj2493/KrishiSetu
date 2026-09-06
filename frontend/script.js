@@ -7,6 +7,1222 @@
 const API_BASE_URL = "https://krishisetu-api-tiau.onrender.com";
 
 // ============================================================
+// I18N / BILINGUAL TRANSLATION SYSTEM (ENGLISH & HINDI)
+// ============================================================
+const KRISHI_I18N = {
+  en: {
+    // Brand & General
+    brandName: "KrishiSetu",
+    brandTagline: "Agriculture Simplified",
+    taglineFull: "Connecting Farmers & Verified Buyers Across India",
+    language: "Language",
+    
+    // Auth & Navigation
+    login: "Login",
+    register: "Register",
+    logout: "Logout",
+    home: "Home",
+    howItWorks: "How It Works",
+    forFarmers: "For Farmers",
+    forBuyers: "For Buyers",
+    marketPrices: "Market Prices",
+    dashboard: "Dashboard",
+    myProduce: "My Produce",
+    produce: "Produce",
+    offersReceived: "Offers Received",
+    offers: "Offers",
+    sentOffers: "Sent Offers",
+    myOrders: "My Orders",
+    orders: "Orders",
+    buyerDemands: "Buyer Demands",
+    browseProduce: "Browse Produce",
+    profileSettings: "Profile Settings",
+    accountProfile: "Account Profile",
+    verifiedUser: "VERIFIED USER",
+    farmerAccount: "Farmer Account",
+    buyerAccount: "Buyer Account",
+    enterPassword: "Enter password",
+    enterPhoneOrEmail: "Enter phone or email",
+    loginAsFarmer: "Login as Farmer",
+    loginAsBuyer: "Login as Buyer",
+    dontHaveAccount: "Don't have an account?",
+    passwordsMismatch: "Passwords do not match!",
+    farmerTab: "🌾 Farmer",
+    buyerTab: "🛒 Buyer",
+    
+    // Hero & Landing
+    heroTitle: "Connect Your Produce With The Right Buyer.",
+    heroDesc: "KrishiSetu helps farmers discover buyers, manage offers and understand agricultural market prices — all in one simple platform.",
+    imFarmer: "🌾 I'm a Farmer!",
+    imBuyer: "🛒 I'm a Buyer!",
+    empoweringAgriBadge: "🌱 Empowering Agriculture",
+    empoweringAgriTitle: "Empowering Ground Level Operations",
+    empoweringAgriDesc: "A robust platform designed for utility and reliability in the agricultural ecosystem.",
+    discoveryNetwork: "Discovery Network",
+    discoveryNetworkDesc: "Seamlessly find verified buyers and local farmers in your region. Our network bridges the gap between produce and demand efficiently.",
+    offerManagement: "Offer Management",
+    offerManagementDesc: "Negotiate and manage deals transparently. Keep track of active, pending and completed transactions in one organized dashboard.",
+    marketPricesDesc: "See the latest reported commodity prices across different mandis. Make informed decisions based on the most recent agricultural market reports.",
+    latestReportedPrices: "📈 Latest Reported Mandi Prices",
+    pricesLangTitle: "Know What Farmers Are Being Paid",
+    pricesLangDesc: "Prices below are the latest figures reported by mandis. They reflect reporting data, not live transactions.",
+    activeListingsCount: "2,400+ Active Listings",
+    latestMandiPrice: "Latest Reported Mandi Price",
+    wheatPriceQ: "Wheat ₹2,350/q",
+    registeredFarmers: "Registered Farmers",
+    verifiedBuyers: "Verified Buyers",
+    commoditiesTracked: "Commodities Tracked",
+    transactionsDone: "Transactions Done",
+    transactionsDoneLabel: "Transactions Done",
+    aboutUs: "About Us",
+    contactSupport: "Contact Support",
+    privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
+    farmerLogin: "Farmer Login",
+    buyerLogin: "Buyer Login",
+    farmerRegister: "Farmer Registration",
+    buyerRegister: "Buyer Registration",
+    
+    // Common Actions
+    sellProduce: "Sell Produce",
+    addProduce: "Add Produce",
+    browseMarketplace: "Browse Marketplace",
+    postRequirement: "Post Requirement",
+    newDemand: "New Demand",
+    makeOffer: "Make an Offer",
+    sendOffer: "Send Offer 🔥",
+    viewDetails: "View Details & Offer",
+    viewAll: "View All →",
+    searchCatalog: "Search Catalog",
+    publishListing: "Publish Listing 🌾",
+    saveChanges: "Save Changes",
+    cancel: "Cancel",
+    close: "Close",
+    edit: "Edit",
+    delete: "Delete",
+    viewMatches: "View Matches",
+    shopMore: "Shop More",
+    
+    // Stats & Dashboards
+    activeListings: "Active Listings",
+    pendingOffers: "Pending Offers",
+    acceptedDeals: "Accepted Deals",
+    activeOrders: "Active Orders",
+    activeDeliveries: "Active Deliveries",
+    totalRevenue: "Total Revenue",
+    totalListings: "Total Listings",
+    sold: "Sold",
+    pending: "Pending",
+    active: "Active",
+    accepted: "Accepted",
+    rejected: "Rejected",
+    delivered: "Delivered",
+    completed: "Completed",
+    welcomeFarmer: "Welcome back! Here's your farm overview.",
+    welcomeBuyer: "Discover fresh crops directly from farmers 🌾",
+    recentActivity: "Recent Activity",
+    quickActions: "Quick Actions",
+    manageProduceDesc: "View, edit or delete your crop listings",
+    reviewOffersDesc: "Accept or reject buyer offers",
+    trackOrdersDesc: "Manage order fulfillment & delivery",
+    noProduceDesc: "Add your first produce to get started",
+    addProduceListing: "Add Produce",
+    confirmSalesOrders: "Confirmed Sales Orders",
+    myPurchaseOrders: "My Purchase Orders",
+    requirementBy: "Requirement by",
+    asap: "ASAP",
+    maxBudget: "Max",
+    noDemandsPosted: "No demands posted",
+    postRequirementPrompt: 'Click "+ Post Requirement" to broadcast your first crop demand to farmers.',
+    postRequirementBtn: "🚀 Publish Requirement",
+    cropSpecs: "Crop Specs",
+    farmerInventoryDetail: "Farmer inventory detail",
+    farmerLocation: "Farmer Location",
+    availableQuantity: "Available Quantity",
+    askingPrice: "Asking Price",
+    farmerListing: "Farmer Listing",
+    buyerRequirement: "Buyer Requirement",
+    noMatchesFound: "No suitable matches found yet",
+    noMatchesFoundDesc: "No active matches found right now. Check back later.",
+    findingFarmers: "Finding suitable farmers for this requirement…",
+    findingBuyers: "Finding suitable buyers for this listing…",
+    orderSummary: "Order Details Summary",
+    purchaseOrderSummary: "Purchase Order Summary",
+    closeSummary: "Close Summary",
+    editListing: "Edit Produce Listing",
+    editRequirement: "Edit Requirement",
+    makeOfferModalTitle: "Make an Offer",
+    makeOfferModalDesc: "Send custom pricing deal to farmer",
+    offeredPriceLabel: "Offered Price (₹)",
+    messageOptional: "Message (optional)",
+    listingDetails: "Listing",
+
+    
+    // Forms & Fields
+    cropName: "Crop Name",
+    quantity: "Quantity",
+    unit: "Unit",
+    price: "Price",
+    pricePerUnit: "Expected Price per Unit (₹)",
+    offeredPrice: "Offered Price (₹)",
+    targetPrice: "Target Price (₹)",
+    state: "State",
+    district: "District",
+    location: "Location",
+    description: "Description (optional)",
+    phone: "Phone Number",
+    phoneOrEmail: "Phone / Email",
+    fullName: "Full Name",
+    password: "Password",
+    confirmPassword: "Confirm Password",
+    businessName: "Business Name",
+    message: "Message (optional)",
+    quickSelectCrop: "Quick Select Crop",
+    mandiBenchmark: "Mandi Benchmark Rate",
+    suggestedRange: "Suggested Range",
+    useMandiRate: "Use Mandi Rate",
+    
+    // Categories
+    catAll: "All Crops",
+    catGrains: "🌾 Grains",
+    catVegetables: "🥦 Vegetables",
+    catFruits: "🍎 Fruits",
+    catPulses: "🫘 Pulses & Oilseeds",
+    catCashCrops: "🌿 Cash Crops",
+    
+    // Placeholders
+    searchCropsPlaceholder: "Search crops (e.g. Wheat, Potato)...",
+    searchCropInput: "Crop (e.g. Wheat)",
+    searchStateInput: "State (e.g. Uttar Pradesh)",
+    cropNamePlaceholder: "e.g. Wheat, Rice, Tomato",
+    qtyPlaceholder: "e.g. 50",
+    pricePlaceholder: "e.g. 2350",
+    statePlaceholder: "e.g. Uttar Pradesh",
+    districtPlaceholder: "e.g. Lucknow",
+    
+    // Register & Extra
+    createAccount: "Create an Account",
+    joinAgriculturalNetwork: "Join the agricultural network",
+    farmer: "Farmer",
+    buyer: "Buyer",
+    createFarmerAccount: "Create Farmer Account",
+    createBuyerAccount: "Create Buyer Account",
+    alreadyHaveAccount: "Already have an account?",
+    companyOrFullName: "Company / Full Name",
+    businessType: "Business Type",
+    selectBusinessType: "Select business type",
+    retailer: "Retailer",
+    wholesaler: "Wholesaler",
+    trader: "Trader",
+    exporter: "Exporter",
+    enterFullName: "Enter full name",
+    enterPhone: "Enter 10-digit number",
+    enterDistrict: "Enter district",
+    enterState: "Enter state (e.g. Uttar Pradesh)",
+    enterBusinessName: "Enter business name",
+    enterCompanyOrName: "Enter company or name",
+    createPasswordPlaceholder: "Create password",
+    confirmPasswordPlaceholder: "Confirm password",
+    selectState: "Select State",
+    selectDistrict: "Select District",
+    allStates: "All States",
+    allDistricts: "All Districts",
+
+    // Empty & Status Messages
+    noListingsYet: "No produce listed yet",
+    noListingsDesc: "Add your first crop to connect directly with verified buyers across India.",
+    noOffersYet: "No incoming offers yet",
+    noOffersDesc: "When buyers send offers on your crops, they will appear right here.",
+    noOrdersYet: "No orders yet",
+    noOrdersDesc: "Accepted deals will automatically become sales orders here.",
+    noDemandsYet: "No buyer requirements posted yet",
+    serverConnecting: "Connecting to KrishiSetu secure servers...",
+    passwordsMismatch: "Passwords do not match!",
+    registerSuccess: "Registration Successful! Redirecting to Login...",
+    loginSuccess: "Login Successful!",
+    loginFailed: "Login failed! Check credentials.",
+    serverError: "Server Error! Please check your connection and try again.",
+    produce: "Produce",
+    offers: "Offers",
+    orders: "Orders",
+    featuredFreshProduce: "Featured Fresh Produce",
+    recentlyListed: "Recently listed by verified local farmers",
+    browse: "Browse",
+    freshFarmHarvest: "Fresh farm harvest",
+    commodityScore: "Commodity",
+    quantityScore: "Quantity",
+    locationScore: "Location",
+    priceScore: "Price",
+    gradeScore: "Grade",
+    orderRef: "Order Reference",
+    status: "Status",
+    cropCommodity: "Crop Commodity",
+    agreedQty: "Agreed Quantity",
+    agreedPrice: "Agreed Unit Price",
+    recentLabel: "Recent",
+    reportedPriceLabel: "Reported",
+    rangeLabel: "Range",
+    reportedOnLabel: "Reported on",
+    sourceLabel: "Source",
+    noReportYet: "Latest report not available yet.",
+    locationUnknown: "Location unknown",
+    requiredQty: "Required Qty",
+    offerFrom: "Offer from Buyer",
+    totalAmount: "Total",
+    listedOnMarketplace: "listed on marketplace",
+    orderFor: "Order for",
+    demandSubtext: "Post crop requirements and let farmers connect with you",
+    postDemandHelp: "Farmers will see your demand",
+    reqByDeadline: "Required By (Deadline)",
+    demandDescPlaceholder: "Need moisture content under 8%...",
+    quintalUnit: "quintal",
+    sessionExpired: "Session expired. Please login again.",
+    cropListedSuccess: "Crop listed successfully! 🌾",
+    listCreateFail: "Failed to create crop listing.",
+    listingUpdated: "Listing updated successfully!",
+    listingUpdateFail: "Failed to update listing.",
+    listingCanceled: "Listing canceled successfully!",
+    listingCancelFail: "Failed to cancel listing.",
+    missingListingInfo: "Missing listing information. Please try again.",
+    validQuantityMsg: "Please enter a valid quantity.",
+    validPriceMsg: "Please enter a valid offered price.",
+    demandPosted: "Requirement posted successfully!",
+    demandPostFail: "Failed to post requirement.",
+    demandUpdated: "Requirement updated successfully!",
+    demandUpdateFail: "Failed to update requirement.",
+    offerSent: "Offer sent successfully to the farmer! 🎉",
+    offerSendFail: "Failed to send offer.",
+    offerAccepted: "Offer accepted successfully!",
+    offerRejected: "Offer rejected successfully!",
+    nameStateDistRequired: "Name, state and district are required.",
+    businessNameRequired: "Business name is required for buyers.",
+    profileUpdated: "Profile updated successfully! ✅",
+    profileUpdateFail: "Failed to update profile.",
+    publishing: "Publishing...",
+    noDescription: "No description provided",
+    failedLoadProduce: "Failed to load produce",
+    errorOccurred: "Error occurred",
+    noMessage: "No additional message",
+    noNoteFromBuyer: "No note from buyer",
+    buyerLabel: "Buyer",
+    farmerLabel: "Farmer",
+    buyerPartner: "Buyer Partner",
+    farmerPartner: "Farmer Partner",
+    produceListingFallback: "Produce Listing",
+    cropHarvest: "Crop Harvest",
+    verifiedFarmer: "Verified Farmer",
+    freshCrop: "Fresh Crop",
+    qty: "Qty",
+    noProduceNow: "No produce available right now. Check back soon! 🌱",
+  },
+  
+  hi: {
+    // Brand & General
+    brandName: "कृषिसेतु",
+    brandTagline: "सरल व पारदर्शी कृषि बाज़ार",
+    taglineFull: "भारत भर के किसानों और खरीदारों का सीधा डिजिटल सेतु",
+    language: "भाषा",
+    
+    // Auth & Navigation
+    login: "लॉगिन करें",
+    register: "पंजीकरण करें",
+    logout: "लॉगआउट",
+    home: "होम",
+    howItWorks: "यह कैसे काम करता है",
+    forFarmers: "किसानों के लिए",
+    forBuyers: "खरीदारों के लिए",
+    marketPrices: "मंडी भाव",
+    dashboard: "डैशबोर्ड",
+    myProduce: "मेरी फसलें",
+    produce: "फसलें",
+    offersReceived: "प्राप्त प्रस्ताव",
+    offers: "प्रस्ताव",
+    sentOffers: "भेजे गए प्रस्ताव",
+    myOrders: "मेरे ऑर्डर",
+    orders: "ऑर्डर",
+    buyerDemands: "खरीदार मांगें",
+    browseProduce: "फसलें खोजें",
+    profileSettings: "प्रोफ़ाइल सेटिंग्स",
+    accountProfile: "खाता प्रोफ़ाइल",
+    verifiedUser: "सत्यापित उपयोगकर्ता",
+    farmerAccount: "किसान खाता",
+    buyerAccount: "खरीदार खाता",
+    enterPassword: "पासवर्ड दर्ज करें",
+    enterPhoneOrEmail: "मोबाइल या ईमेल दर्ज करें",
+    loginAsFarmer: "किसान के रूप में लॉगिन करें",
+    loginAsBuyer: "खरीदार के रूप में लॉगिन करें",
+    dontHaveAccount: "क्या आपके पास खाता नहीं है?",
+    farmerTab: "🌾 किसान",
+    buyerTab: "🛒 खरीदार",
+    
+    // Hero & Landing
+    heroTitle: "अपनी फसल सीधे सही खरीदार को बेचें।",
+    heroDesc: "कृषिसेतु किसानों को सीधे खरीदार खोजने, उचित मूल्य पाने और दैनिक मंडी भाव जानने में मदद करता है — बिल्कुल सरल और पारदर्शी।",
+    imFarmer: "🌾 मैं किसान हूँ!",
+    imBuyer: "🛒 मैं खरीदार हूँ!",
+    empoweringAgriBadge: "🌱 कृषि को सशक्त बनाते हुए",
+    empoweringAgriTitle: "जमीनी कृषि कार्यों को सशक्त बनाना",
+    empoweringAgriDesc: "कृषि पारिस्थितिकी तंत्र में उपयोगिता और विश्वसनीयता के लिए डिज़ाइन किया गया एक मजबूत प्लेटफ़ॉर्म।",
+    discoveryNetwork: "खोज नेटवर्क",
+    discoveryNetworkDesc: "अपने क्षेत्र में सत्यापित खरीदारों और स्थानीय किसानों को आसानी से खोजें। हमारा नेटवर्क फसल और मांग के बीच की दूरी को कुशलता से पाटता है।",
+    offerManagement: "प्रस्ताव प्रबंधन",
+    offerManagementDesc: "सौदों पर पारदर्शी तरीके से बातचीत करें और उन्हें प्रबंधित करें। एक व्यवस्थित डैशबोर्ड में सक्रिय, लंबित और पूर्ण सौदों का ब्यौरा रखें।",
+    marketPricesDesc: "विभिन्न मंडियों में नवीनतम कमोडिटी मूल्य देखें। ताज़ा कृषि मंडी रिपोर्ट के आधार पर सही निर्णय लें।",
+    latestReportedPrices: "📈 ताज़ा रिपोर्ट किए गए मंडी भाव",
+    pricesLangTitle: "जानें किसानों को कितना मूल्य मिल रहा है",
+    pricesLangDesc: "नीचे दिए गए मूल्य मंडियों द्वारा रिपोर्ट किए गए नवीनतम आंकड़े हैं। ये रिपोर्ट डेटा हैं, लाइव लेनदेन नहीं।",
+    activeListingsCount: "२,४००+ सक्रिय फसलें",
+    latestMandiPrice: "ताज़ा मंडी भाव रिपोर्ट",
+    wheatPriceQ: "गेहूँ ₹2,350/क्विंटल",
+    registeredFarmers: "पंजीकृत किसान",
+    verifiedBuyers: "सत्यापित खरीदार",
+    commoditiesTracked: "फसलें ट्रैक की गईं",
+    transactionsDone: "कुल कारोबार",
+    transactionsDoneLabel: "कुल कारोबार",
+    aboutUs: "हमारे बारे में",
+    contactSupport: "सहायता संपर्क",
+    privacyPolicy: "गोपनीयता नीति",
+    termsOfService: "सेवा की शर्तें",
+    farmerLogin: "किसान लॉगिन",
+    buyerLogin: "खरीदार लॉगिन",
+    farmerRegister: "किसान पंजीकरण",
+    buyerRegister: "खरीदार पंजीकरण",
+    
+    // Common Actions
+    sellProduce: "फसल बेचें",
+    addProduce: "फसल जोड़ें",
+    browseMarketplace: "बाज़ार में खोजें",
+    postRequirement: "मांग दर्ज करें",
+    newDemand: "नई मांग",
+    makeOffer: "प्रस्ताव दें",
+    sendOffer: "प्रस्ताव भेजें 🔥",
+    viewDetails: "विवरण व प्रस्ताव देखें",
+    viewAll: "सभी देखें →",
+    searchCatalog: "फसल खोजें",
+    publishListing: "फसल लिस्ट करें 🌾",
+    saveChanges: "सुरक्षित करें",
+    cancel: "रद्द करें",
+    close: "बंद करें",
+    edit: "संशोधित करें",
+    delete: "हटाएं",
+    viewMatches: "मैचिंग खरीदार देखें",
+    shopMore: "और खरीदें",
+    
+    // Stats & Dashboards
+    activeListings: "सक्रिय फसलें",
+    pendingOffers: "लंबित प्रस्ताव",
+    acceptedDeals: "पक्के सौदे",
+    activeOrders: "सक्रिय ऑर्डर",
+    activeDeliveries: "जारी डिलीवरी",
+    totalRevenue: "कुल कमाई",
+    totalListings: "कुल फसलें",
+    sold: "बिक गया",
+    pending: "लंबित",
+    active: "सक्रिय",
+    accepted: "स्वीकृत",
+    rejected: "अस्वीकृत",
+    delivered: "डिलीवर हुआ",
+    completed: "पूर्ण",
+    welcomeFarmer: "स्वागत है! यहाँ आपकी फसलों और ऑर्डर्स का ब्यौरा है।",
+    welcomeBuyer: "सीधे किसानों से ताज़ा फसलें और उपज खरीदें 🌾",
+    recentActivity: "हाल की गतिविधि",
+    quickActions: "त्वरित कार्य",
+    manageProduceDesc: "अपनी फसलों की सूची देखें, बदलें या हटाएं",
+    reviewOffersDesc: "खरीदारों द्वारा दिए गए प्रस्ताव स्वीकार या अस्वीकार करें",
+    trackOrdersDesc: "ऑर्डर की पूर्ति और डिलीवरी की स्थिति देखें",
+    noProduceDesc: "शुरुआत के लिए अपनी पहली फसल जोड़ें",
+    addProduceListing: "फसल जोड़ें",
+    confirmSalesOrders: "पक्के बिक्री ऑर्डर",
+    myPurchaseOrders: "मेरे खरीद ऑर्डर",
+    requirementBy: "आवश्यकता तिथि",
+    asap: "जितनी जल्दी हो",
+    maxBudget: "अधिकतम",
+    noDemandsPosted: "कोई मांग दर्ज नहीं है",
+    postRequirementPrompt: 'किसानों को अपनी पहली फसल मांग बताने के लिए "+ मांग दर्ज करें" पर क्लिक करें।',
+    postRequirementBtn: "🚀 मांग प्रकाशित करें",
+    cropSpecs: "फसल की जानकारी",
+    farmerInventoryDetail: "किसान स्टॉक विवरण",
+    farmerLocation: "किसान का स्थान",
+    availableQuantity: "उपलब्ध मात्रा",
+    askingPrice: "माँगा गया मूल्य",
+    farmerListing: "किसान की फसल",
+    buyerRequirement: "खरीदार की मांग",
+    noMatchesFound: "अभी कोई उपयुक्त मैच नहीं मिला",
+    noMatchesFoundDesc: "अभी कोई सक्रिय मैच नहीं मिला। बाद में फिर देखें।",
+    findingFarmers: "इस मांग के लिए उपयुक्त किसान खोजे जा रहे हैं…",
+    findingBuyers: "इस फसल के लिए उपयुक्त खरीदार खोजे जा रहे हैं…",
+    orderSummary: "ऑर्डर विवरण सारांश",
+    purchaseOrderSummary: "खरीद ऑर्डर सारांश",
+    closeSummary: "सारांश बंद करें",
+    editListing: "फसल लिस्टिंग संपादित करें",
+    editRequirement: "मांग संपादित करें",
+    makeOfferModalTitle: "प्रस्ताव दें",
+    makeOfferModalDesc: "किसान को कस्टम कीमत वाला सौदा भेजें",
+    offeredPriceLabel: "प्रस्तावित मूल्य (₹)",
+    messageOptional: "संदेश (वैकल्पिक)",
+    listingDetails: "लिस्टिंग",
+    
+    // Forms & Fields
+    cropName: "फसल का नाम",
+    quantity: "मात्रा",
+    unit: "इकाई",
+    price: "भाव / मूल्य",
+    pricePerUnit: "अपेक्षित मूल्य प्रति इकाई (₹)",
+    offeredPrice: "प्रस्तावित मूल्य (₹)",
+    targetPrice: "अधिकतम बजट मूल्य (₹)",
+    state: "राज्य",
+    district: "जिला",
+    location: "स्थान",
+    description: "विवरण (वैकल्पिक)",
+    phone: "मोबाइल नंबर",
+    phoneOrEmail: "मोबाइल / ईमेल",
+    fullName: "पूरा नाम",
+    password: "पासवर्ड",
+    confirmPassword: "पासवर्ड की पुष्टि करें",
+    businessName: "व्यापार / संस्था का नाम",
+    message: "संदेश (वैकल्पिक)",
+    quickSelectCrop: "त्वरित फसल चुनें",
+    mandiBenchmark: "मंडी बेंचमार्क औसत",
+    suggestedRange: "अनुशंसित मूल्य दायरा",
+    useMandiRate: "यह भाव चुनें",
+    
+    // Categories
+    catAll: "सभी फसलें",
+    catGrains: "🌾 अनाज",
+    catVegetables: "🥦 सब्जियां",
+    catFruits: "🍎 फल",
+    catPulses: "🫘 दालें व तिलहन",
+    catCashCrops: "🌿 नकदी फसलें",
+    
+    // Placeholders
+    searchCropsPlaceholder: "फसल का नाम खोजें (जैसे गेहूं, आलू)...",
+    searchCropInput: "फसल (जैसे गेहूं)",
+    searchStateInput: "राज्य (जैसे उत्तर प्रदेश)",
+    cropNamePlaceholder: "उदा. गेहूं, धान, टमाटर",
+    qtyPlaceholder: "उदा. 50",
+    pricePlaceholder: "उदा. 2350",
+    statePlaceholder: "उदा. उत्तर प्रदेश",
+    districtPlaceholder: "उदा. लखनऊ",
+
+    // Register & Extra
+    createAccount: "खाता बनाएं",
+    joinAgriculturalNetwork: "कृषि नेटवर्क से जुड़ें",
+    farmer: "किसान",
+    buyer: "खरीदार",
+    createFarmerAccount: "किसान खाता बनाएं",
+    createBuyerAccount: "खरीदार खाता बनाएं",
+    alreadyHaveAccount: "क्या आपके पास पहले से खाता है?",
+    companyOrFullName: "कंपनी या पूरा नाम",
+    businessType: "व्यापार का प्रकार",
+    selectBusinessType: "व्यापार का प्रकार चुनें",
+    retailer: "खुदरा विक्रेता (Retailer)",
+    wholesaler: "थोक व्यापारी (Wholesaler)",
+    trader: "व्यापारी (Trader)",
+    exporter: "निर्यातक (Exporter)",
+    enterFullName: "पूरा नाम दर्ज करें",
+    enterPhone: "१० अंकों का मोबाइल नंबर दर्ज करें",
+    enterDistrict: "जिले का नाम दर्ज करें",
+    enterState: "राज्य दर्ज करें (जैसे उत्तर प्रदेश)",
+    enterBusinessName: "व्यापार का नाम दर्ज करें",
+    enterCompanyOrName: "कंपनी या अपना नाम दर्ज करें",
+    createPasswordPlaceholder: "पासवर्ड बनाएं",
+    confirmPasswordPlaceholder: "पासवर्ड की दोबारा पुष्टि करें",
+    selectState: "राज्य चुनें",
+    selectDistrict: "जिला चुनें",
+    allStates: "सभी राज्य",
+    allDistricts: "सभी जिले",
+    
+    // Empty & Status Messages
+    noListingsYet: "कोई फसल लिस्ट नहीं है",
+    noListingsDesc: "अपनी फसल लिस्ट करें और भारत भर के सत्यापित खरीदारों से सीधे जुड़ें।",
+    noOffersYet: "कोई नया प्रस्ताव नहीं आया है",
+    noOffersDesc: "जब कोई खरीदार आपकी फसल पर बोली लगाएगा, तो वह यहाँ दिखेगा।",
+    noOrdersYet: "कोई ऑर्डर नहीं है",
+    noOrdersDesc: "स्वीकृत सौदे अपने आप यहाँ ऑर्डर बन जाएंगे।",
+    noDemandsYet: "खरीदारों की कोई मांग दर्ज नहीं है",
+    serverConnecting: "सुरक्षित सर्वर से कनेक्ट हो रहा है...",
+    passwordsMismatch: "पासवर्ड मेल नहीं खाते!",
+    registerSuccess: "पंजीकरण सफल! लॉगिन पेज पर ले जाया जा रहा है...",
+    loginSuccess: "लॉगिन सफल!",
+    loginFailed: "लॉगिन विफल! क्रेडेंशियल्स की जांच करें।",
+    serverError: "सर्वर त्रुटि! कृपया अपना कनेक्शन जांचें और पुनः प्रयास करें।",
+    produce: "फसलें",
+    offers: "प्रस्ताव",
+    orders: "ऑर्डर",
+    featuredFreshProduce: "विशेष ताज़ा फसलें",
+    recentlyListed: "हाल ही में सत्यापित स्थानीय किसानों द्वारा सूचीबद्ध",
+    browse: "खोजें",
+    freshFarmHarvest: "ताज़ी फसल की उपज",
+    commodityScore: "फसल",
+    quantityScore: "मात्रा",
+    locationScore: "स्थान",
+    priceScore: "मूल्य",
+    gradeScore: "ग्रेड",
+    orderRef: "ऑर्डर संदर्भ",
+    status: "स्थिति",
+    cropCommodity: "फसल वस्तु",
+    agreedQty: "सहमत मात्रा",
+    agreedPrice: "सहमत इकाई मूल्य",
+    recentLabel: "ताज़ा",
+    reportedPriceLabel: "रिपोर्ट किया गया",
+    rangeLabel: "सीमा",
+    reportedOnLabel: "रिपोर्ट तिथि",
+    sourceLabel: "स्रोत",
+    noReportYet: "अभी नवीनतम रिपोर्ट उपलब्ध नहीं है।",
+    locationUnknown: "स्थान अज्ञात",
+    requiredQty: "आवश्यक मात्रा",
+    offerFrom: "खरीदार का प्रस्ताव",
+    totalAmount: "कुल",
+    listedOnMarketplace: "बाज़ार में लिस्ट की गई",
+    orderFor: "ऑर्डर",
+    demandSubtext: "अपनी फसल मांगें दर्ज करें और किसानों को आपसे जुड़ने दें",
+    postDemandHelp: "किसान आपकी मांग देख पाएंगे",
+    reqByDeadline: "आवश्यकता तिथि",
+    demandDescPlaceholder: "नमी की मात्रा 8% से कम हो…",
+    quintalUnit: "क्विंटल",
+    sessionExpired: "सत्र समाप्त हो गया। कृपया फिर से लॉगिन करें।",
+    cropListedSuccess: "फसल सफलतापूर्वक लिस्ट हुई! 🌾",
+    listCreateFail: "फसल लिस्टिंग बनाने में विफल।",
+    listingUpdated: "लिस्टिंग सफलतापूर्वक अपडेट हुई!",
+    listingUpdateFail: "लिस्टिंग अपडेट करने में विफल।",
+    listingCanceled: "लिस्टिंग सफलतापूर्वक रद्द हुई!",
+    listingCancelFail: "लिस्टिंग रद्द करने में विफल।",
+    missingListingInfo: "लिस्टिंग की जानकारी अधूरी है। कृपया पुनः प्रयास करें।",
+    validQuantityMsg: "कृपया सही मात्रा दर्ज करें।",
+    validPriceMsg: "कृपया सही प्रस्तावित मूल्य दर्ज करें।",
+    demandPosted: "मांग सफलतापूर्वक दर्ज हुई!",
+    demandPostFail: "मांग दर्ज करने में विफल।",
+    demandUpdated: "मांग सफलतापूर्वक अपडेट हुई!",
+    demandUpdateFail: "मांग अपडेट करने में विफल।",
+    offerSent: "किसान को प्रस्ताव सफलतापूर्वक भेजा गया! 🎉",
+    offerSendFail: "प्रस्ताव भेजने में विफल।",
+    offerAccepted: "प्रस्ताव सफलतापूर्वक स्वीकार किया गया!",
+    offerRejected: "प्रस्ताव सफलतापूर्वक अस्वीकार किया गया!",
+    nameStateDistRequired: "नाम, राज्य और जिला आवश्यक हैं।",
+    businessNameRequired: "खरीदारों के लिए व्यापार का नाम आवश्यक है।",
+    profileUpdated: "प्रोफ़ाइल सफलतापूर्वक अपडेट हुई! ✅",
+    profileUpdateFail: "प्रोफ़ाइल अपडेट करने में विफल।",
+    publishing: "प्रकाशित हो रहा है…",
+    noDescription: "कोई विवरण नहीं दिया गया",
+    failedLoadProduce: "फसलें लोड करने में विफल",
+    errorOccurred: "त्रुटि हुई",
+    noMessage: "कोई अतिरिक्त संदेश नहीं",
+    noNoteFromBuyer: "खरीदार की ओर से कोई नोट नहीं",
+    buyerLabel: "खरीदार",
+    farmerLabel: "किसान",
+    buyerPartner: "खरीदार साथी",
+    farmerPartner: "किसान साथी",
+    produceListingFallback: "फसल लिस्टिंग",
+    cropHarvest: "फसल की उपज",
+    verifiedFarmer: "सत्यापित किसान",
+    freshCrop: "ताज़ी फसल",
+    qty: "मात्रा",
+    noProduceNow: "अभी कोई फसल उपलब्ध नहीं है। जल्द ही फिर देखें! 🌱",
+  }
+};
+
+// ============================================================
+// POPULAR INDIAN CROPS DATA & BENCHMARKS
+// ============================================================
+const POPULAR_CROPS = [
+  { id: "wheat", nameEn: "Wheat", nameHi: "गेहूं", icon: "🌾", unit: "quintal", avgPrice: 2275, minPrice: 2150, maxPrice: 2450, category: "grains" },
+  { id: "paddy", nameEn: "Rice / Paddy", nameHi: "धान / चावल", icon: "🍚", unit: "quintal", avgPrice: 2183, minPrice: 2050, maxPrice: 2350, category: "grains" },
+  { id: "potato", nameEn: "Potato", nameHi: "आलू", icon: "🥔", unit: "quintal", avgPrice: 1250, minPrice: 1050, maxPrice: 1450, category: "vegetables" },
+  { id: "onion", nameEn: "Onion", nameHi: "प्याज", icon: "🧅", unit: "quintal", avgPrice: 1800, minPrice: 1500, maxPrice: 2200, category: "vegetables" },
+  { id: "tomato", nameEn: "Tomato", nameHi: "टमाटर", icon: "🍅", unit: "quintal", avgPrice: 1650, minPrice: 1300, maxPrice: 2100, category: "vegetables" },
+  { id: "mustard", nameEn: "Mustard", nameHi: "सरसों", icon: "🌿", unit: "quintal", avgPrice: 5450, minPrice: 5100, maxPrice: 5800, category: "pulses" },
+  { id: "maize", nameEn: "Maize", nameHi: "मक्का", icon: "🌽", unit: "quintal", avgPrice: 2090, minPrice: 1900, maxPrice: 2250, category: "grains" },
+  { id: "cotton", nameEn: "Cotton", nameHi: "कपास", icon: "🌱", unit: "quintal", avgPrice: 6620, minPrice: 6200, maxPrice: 7100, category: "cash" },
+  { id: "sugarcane", nameEn: "Sugarcane", nameHi: "गन्ना", icon: "🎋", unit: "quintal", avgPrice: 350, minPrice: 320, maxPrice: 380, category: "cash" },
+  { id: "groundnut", nameEn: "Groundnut", nameHi: "मूंगफली", icon: "🥜", unit: "quintal", avgPrice: 6377, minPrice: 6000, maxPrice: 6800, category: "pulses" },
+  { id: "cauliflower", nameEn: "Cauliflower", nameHi: "फूलगोभी", icon: "🥦", unit: "quintal", avgPrice: 1800, minPrice: 1500, maxPrice: 2200, category: "vegetables" },
+  { id: "cabbage", nameEn: "Cabbage", nameHi: "पत्ता गोभी", icon: "🥬", unit: "quintal", avgPrice: 1500, minPrice: 1200, maxPrice: 1900, category: "vegetables" },
+  { id: "banana", nameEn: "Banana", nameHi: "केला", icon: "🍌", unit: "quintal", avgPrice: 2800, minPrice: 2500, maxPrice: 3200, category: "fruits" },
+  { id: "mango", nameEn: "Mango", nameHi: "आम", icon: "🥭", unit: "quintal", avgPrice: 3500, minPrice: 2800, maxPrice: 4200, category: "fruits" },
+  { id: "lentils", nameEn: "Dal", nameHi: "दाल", icon: "🫘", unit: "quintal", avgPrice: 6400, minPrice: 5800, maxPrice: 7000, category: "pulses" },
+  // Extended Hindi crop dictionary (proper names, not transliteration)
+  { id: "carrot", nameEn: "Carrot", nameHi: "गाजर", icon: "🥕", unit: "quintal", avgPrice: 1500, minPrice: 1200, maxPrice: 1900, category: "vegetables" },
+  { id: "radish", nameEn: "Radish", nameHi: "मूली", icon: "🌰", unit: "quintal", avgPrice: 1100, minPrice: 900, maxPrice: 1400, category: "vegetables" },
+  { id: "turnip", nameEn: "Turnip", nameHi: "शलजम", icon: "🥔", unit: "quintal", avgPrice: 1200, minPrice: 900, maxPrice: 1500, category: "vegetables" },
+  { id: "spinach", nameEn: "Spinach", nameHi: "पालक", icon: "🥬", unit: "quintal", avgPrice: 1400, minPrice: 1100, maxPrice: 1800, category: "vegetables" },
+  { id: "cucumber", nameEn: "Cucumber", nameHi: "खीरा", icon: "🥒", unit: "quintal", avgPrice: 1300, minPrice: 1000, maxPrice: 1700, category: "vegetables" },
+  { id: "brinjal", nameEn: "Brinjal", nameHi: "बैंगन", icon: "🍆", unit: "quintal", avgPrice: 1600, minPrice: 1300, maxPrice: 2000, category: "vegetables" },
+  { id: "bottle_gourd", nameEn: "Bottle Gourd", nameHi: "लौकी", icon: "🥒", unit: "quintal", avgPrice: 1200, minPrice: 900, maxPrice: 1500, category: "vegetables" },
+  { id: "bitter_gourd", nameEn: "Bitter Gourd", nameHi: "करेला", icon: "🥒", unit: "quintal", avgPrice: 1700, minPrice: 1400, maxPrice: 2100, category: "vegetables" },
+  { id: "chilli", nameEn: "Green Chilli", nameHi: "हरी मिर्च", icon: "🌶️", unit: "quintal", avgPrice: 2400, minPrice: 1900, maxPrice: 2900, category: "vegetables" },
+  { id: "capsicum", nameEn: "Capsicum", nameHi: "शिमला मिर्च", icon: "🫑", unit: "quintal", avgPrice: 2200, minPrice: 1800, maxPrice: 2700, category: "vegetables" },
+  { id: "peas", nameEn: "Peas", nameHi: "मटर", icon: "🫛", unit: "quintal", avgPrice: 2600, minPrice: 2100, maxPrice: 3200, category: "vegetables" },
+  { id: "beans", nameEn: "Beans", nameHi: "फलियाँ", icon: "🫘", unit: "quintal", avgPrice: 2100, minPrice: 1700, maxPrice: 2600, category: "vegetables" },
+  { id: "garlic", nameEn: "Garlic", nameHi: "लहसुन", icon: "🧄", unit: "quintal", avgPrice: 8500, minPrice: 7000, maxPrice: 10000, category: "vegetables" },
+  { id: "ginger", nameEn: "Ginger", nameHi: "अदरक", icon: "🫚", unit: "quintal", avgPrice: 7200, minPrice: 6000, maxPrice: 8800, category: "vegetables" },
+  { id: "turmeric", nameEn: "Turmeric", nameHi: "हल्दी", icon: "🟡", unit: "quintal", avgPrice: 9800, minPrice: 8200, maxPrice: 12000, category: "pulses" },
+  { id: "bajra", nameEn: "Bajra", nameHi: "बाजरा", icon: "🌾", unit: "quintal", avgPrice: 2150, minPrice: 1950, maxPrice: 2350, category: "grains" },
+  { id: "barley", nameEn: "Barley", nameHi: "जौ", icon: "🌾", unit: "quintal", avgPrice: 1800, minPrice: 1600, maxPrice: 2100, category: "grains" },
+  { id: "jowar", nameEn: "Jowar", nameHi: "ज्वार", icon: "🌾", unit: "quintal", avgPrice: 2400, minPrice: 2100, maxPrice: 2700, category: "grains" },
+  { id: "soybean", nameEn: "Soybean", nameHi: "सोयाबीन", icon: "🫘", unit: "quintal", avgPrice: 4800, minPrice: 4300, maxPrice: 5300, category: "pulses" },
+  { id: "gram", nameEn: "Gram", nameHi: "चना", icon: "🫘", unit: "quintal", avgPrice: 5300, minPrice: 4800, maxPrice: 5800, category: "pulses" },
+  { id: "moong", nameEn: "Moong", nameHi: "मूंग", icon: "🫘", unit: "quintal", avgPrice: 6600, minPrice: 6000, maxPrice: 7200, category: "pulses" },
+  { id: "urad", nameEn: "Urad", nameHi: "उड़द", icon: "🫘", unit: "quintal", avgPrice: 6800, minPrice: 6200, maxPrice: 7400, category: "pulses" },
+  { id: "rajma", nameEn: "Rajma", nameHi: "राजमा", icon: "🫘", unit: "quintal", avgPrice: 6900, minPrice: 6300, maxPrice: 7500, category: "pulses" },
+  { id: "coriander", nameEn: "Coriander", nameHi: "धनिया", icon: "🌿", unit: "quintal", avgPrice: 2600, minPrice: 2100, maxPrice: 3200, category: "vegetables" },
+  { id: "apple", nameEn: "Apple", nameHi: "सेब", icon: "🍎", unit: "quintal", avgPrice: 5200, minPrice: 4200, maxPrice: 6500, category: "fruits" },
+  { id: "orange", nameEn: "Orange", nameHi: "संतरा", icon: "🍊", unit: "quintal", avgPrice: 3800, minPrice: 3100, maxPrice: 4600, category: "fruits" },
+  { id: "grapes", nameEn: "Grapes", nameHi: "अंगूर", icon: "🍇", unit: "quintal", avgPrice: 4600, minPrice: 3800, maxPrice: 5600, category: "fruits" },
+  { id: "papaya", nameEn: "Papaya", nameHi: "पपीता", icon: "🍈", unit: "quintal", avgPrice: 2400, minPrice: 1900, maxPrice: 3000, category: "fruits" },
+  { id: "guava", nameEn: "Guava", nameHi: "अमरूद", icon: "🍈", unit: "quintal", avgPrice: 2800, minPrice: 2200, maxPrice: 3400, category: "fruits" },
+  { id: "pomegranate", nameEn: "Pomegranate", nameHi: "अनार", icon: "🍎", unit: "quintal", avgPrice: 7200, minPrice: 5800, maxPrice: 8800, category: "fruits" },
+  { id: "watermelon", nameEn: "Watermelon", nameHi: "तरबूज", icon: "🍉", unit: "quintal", avgPrice: 1400, minPrice: 1000, maxPrice: 1800, category: "fruits" },
+  { id: "coconut", nameEn: "Coconut", nameHi: "नारियल", icon: "🥥", unit: "quintal", avgPrice: 4500, minPrice: 3800, maxPrice: 5400, category: "cash" },
+  { id: "jaggery", nameEn: "Jaggery", nameHi: "गुड़", icon: "🍯", unit: "quintal", avgPrice: 5600, minPrice: 4800, maxPrice: 6400, category: "cash" },
+  { id: "tobacco", nameEn: "Tobacco", nameHi: "तंबाकू", icon: "🍂", unit: "quintal", avgPrice: 8800, minPrice: 7500, maxPrice: 10000, category: "cash" },
+];
+
+function getCropCategory(cropName) {
+  if (!cropName) return "other";
+  const lower = cropName.toLowerCase();
+  if (lower.includes("wheat") || lower.includes("गेहूं") || lower.includes("rice") || lower.includes("paddy") || lower.includes("धान") || lower.includes("चावल") || lower.includes("maize") || lower.includes("मक्का") || lower.includes("barley") || lower.includes("bajra") || lower.includes("jowar")) return "grains";
+  if (lower.includes("potato") || lower.includes("आलू") || lower.includes("onion") || lower.includes("प्याज") || lower.includes("tomato") || lower.includes("टमाटर") || lower.includes("cauliflower") || lower.includes("cabbage") || lower.includes("brinjal") || lower.includes("chilli") || lower.includes("garlic") || lower.includes("ginger")) return "vegetables";
+  if (lower.includes("mango") || lower.includes("आम") || lower.includes("apple") || lower.includes("सेब") || lower.includes("banana") || lower.includes("केला") || lower.includes("orange") || lower.includes("grapes") || lower.includes("papaya") || lower.includes("guava")) return "fruits";
+  if (lower.includes("mustard") || lower.includes("सरसों") || lower.includes("soybean") || lower.includes("gram") || lower.includes("चना") || lower.includes("tur") || lower.includes("arhar") || lower.includes("moong") || lower.includes("urad") || lower.includes("groundnut") || lower.includes("मूंगफली") || lower.includes("pulse")) return "pulses";
+  if (lower.includes("cotton") || lower.includes("कपास") || lower.includes("sugarcane") || lower.includes("गन्ना") || lower.includes("jute") || lower.includes("tobacco") || lower.includes("tea") || lower.includes("coffee")) return "cash";
+  return "other";
+}
+
+function getTranslatedCropName(cropName) {
+  if (!cropName) return "";
+  if (getCurrentLanguage() !== "hi") return cropName;
+  const name = String(cropName).toLowerCase().trim();
+  if (!name) return cropName;
+
+  const ALIASES = {
+    cauliflour: "cauliflower",
+    cauliflowers: "cauliflower",
+    tomatos: "tomato",
+    tomatoes: "tomato",
+    dal: "dal",
+    dals: "dal",
+    paddy: "rice / paddy",
+    rice: "rice / paddy",
+    wheat: "wheat",
+    rajma: "rajma",
+  };
+
+  const lookup = ALIASES[name] || name;
+
+  const crop = POPULAR_CROPS.find(c => {
+    const e = c.nameEn.toLowerCase().trim();
+    if (e === lookup) return true;
+    const parts = e.split("/").map(x => x.trim());
+    if (parts.includes(lookup)) return true;
+    if (parts.some(p => p.includes(lookup) && lookup.length >= 4)) return true;
+    if (parts.some(p => lookup.includes(p) && lookup.length >= 4)) return true;
+    return false;
+  });
+
+  return crop ? crop.nameHi : enToDevanagari(cropName);
+}
+
+// ============================================================
+// FALLBACK HINDI TRANSLITERATION (for any unknown / future items)
+// Converts any English word to phonetically valid Devanagari,
+// so everything renders in Hindi even for crops never seen before.
+// ============================================================
+function enToDevanagari(text) {
+  if (!text) return "";
+  const w = String(text).toLowerCase().trim();
+  if (!w) return text;
+
+  const unitWords = {
+    kg: "किग्रा",
+    kgs: "किग्रा",
+    kilogram: "किलोग्राम",
+    kilograms: "किलोग्राम",
+    gm: "ग्राम",
+    gms: "ग्राम",
+    gram: "ग्राम",
+    grams: "ग्राम",
+    quintal: "क्विंटल",
+    quintals: "क्विंटल",
+    q: "क्विंटल",
+    ton: "टन",
+    tons: "टन",
+    litre: "लीटर",
+    liter: "लीटर",
+    litres: "लीटर",
+    liters: "लीटर",
+    ml: "मिलीलीटर",
+    piece: "नग",
+    pieces: "नग",
+    dozen: "दर्जन",
+    dozens: "दर्जन",
+    bag: "बोरी",
+    bags: "बोरी",
+    sack: "बोरी",
+    sacks: "बोरी",
+    bundle: "गड्डी",
+    bundles: "गड्डी",
+    box: "बॉक्स",
+    boxes: "बॉक्स",
+    packet: "पैकेट",
+    packets: "पैकेट",
+    crate: "टोकरी",
+    crates: "टोकरी",
+    acre: "एकड़",
+    acre: "एकड़",
+    hectare: "हेक्टेयर",
+    bushel: "बुशल",
+  };
+  if (unitWords[w]) return unitWords[w];
+
+  const multichar = [
+    ["kh", "ख"], ["gh", "घ"], ["ch", "च"], ["jh", "झ"], ["th", "थ"],
+    ["dh", "ध"], ["ph", "फ"], ["bh", "भ"], ["sh", "श"], ["zh", "झ"],
+    ["ng", "ंग"], ["nk", "ंक"], ["nd", "ंड"], ["nt", "ंट"], ["mp", "ंप"],
+    ["oo", "ऊ"], ["ee", "ई"], ["aa", "आ"], ["ai", "ऐ"], ["au", "औ"],
+    ["ou", "ओ"], ["oi", "ऑ"], ["aw", "ऑ"], ["ck", "क"], ["qu", "क्व"],
+  ];
+
+  const cons = {
+    a:"ा", b:"ब", c:"क", d:"ड", e:"े", f:"फ", g:"ग", h:"ह", i:"ि",
+    j:"ज", k:"क", l:"ल", m:"म", n:"न", o:"ो", p:"प", q:"क", r:"र",
+    s:"स", t:"ट", u:"ु", v:"व", w:"व", x:"क्ष", y:"य", z:"ज़",
+  };
+  const startVowel = { a:"अ", e:"ए", i:"इ", o:"ओ", u:"उ" };
+
+  const isVowel = ch => "aeiou".includes(ch);
+  let i = 0;
+  let out = "";
+  let prevGlyph = null; // last appended consonant glyph (for halant logic)
+
+  const pushCons = (ch) => {
+    const glyph = cons[ch] || "";
+    // if previous was a consonant with no vowel yet, add halant
+    out += glyph;
+    prevGlyph = glyph;
+  };
+  const pushVowel = (matraOrStandalone) => {
+    if (prevGlyph && isConsonantGlyph(prevGlyph)) {
+      out += matraOrStandalone;
+    } else {
+      out += startVowel[matraOrStandalone] || "अ";
+    }
+    prevGlyph = null;
+  };
+  const isConsonantGlyph = (g) =>
+    g && "कखगघङचछजझञटठडढणतथदधनपफबभमयरलवशषसह".includes(g[0]);
+
+  while (i < w.length) {
+    // multi-char specials
+    let matched = false;
+    for (const [pair, glyph] of multichar) {
+      if (w.startsWith(pair, i)) {
+        // special glyphs that are standalone (vowelish) vs consonant
+        if ("ऊईआऐऔऑओ".includes(glyph)) {
+          // standalone long vowel: reset prev consonant (skip matra)
+          out += glyph;
+          prevGlyph = null;
+        } else {
+          out += glyph;
+          prevGlyph = glyph;
+          const after = w[i + pair.length];
+          if (after && !isVowel(after) && after !== " ") {
+            out += "्";
+            prevGlyph = null;
+          }
+        }
+        i += pair.length;
+        matched = true;
+        break;
+      }
+    }
+    if (matched) continue;
+
+    const ch = w[i];
+
+    // silent final / schwa 'e'
+    if (ch === "e") {
+      const next = w[i + 1];
+      if (i === w.length - 1) {
+        i++;
+        continue; // drop final silent e
+      }
+      if (next && isVowel(next)) { i++; continue; } // e before vowel -> skip
+      // 'e' after consonant before consonant -> schwa, skip
+      if (prevGlyph && isConsonantGlyph(prevGlyph) && next && "bcdfghjklmnpqrstvwxyz".includes(next)) {
+        i++;
+        continue; // skip schwa (God/garden style)
+      }
+    }
+
+    if (isVowel(ch)) {
+      const hereStart = i === 0 || !prevGlyph;
+      if (ch === "a" && i === 0) { out += "अ"; prevGlyph = null; }
+      else if (ch === "a" && hereStart) { out += "आ"; prevGlyph = null; }
+      else if (ch === "i" && (hereStart || i === 0)) { out += "इ"; prevGlyph = null; }
+      else if (ch === "e" && (hereStart || i === 0)) { out += "ए"; prevGlyph = null; }
+      else if (ch === "o" && (hereStart || i === 0)) { out += "ओ"; prevGlyph = null; }
+      else if (ch === "u" && (hereStart || i === 0)) { out += "उ"; prevGlyph = null; }
+      else { out += cons[ch]; prevGlyph = null; }
+      i++;
+      continue;
+    }
+
+    // consonants
+    if (cons[ch]) {
+      // 'r' following a vowel already emitted usually handled as consonant
+      const next = w[i + 1];
+      const nextIsVowel = next && isVowel(next);
+      pushCons(ch);
+      // if this consonant is followed by vowel, prevent halant (vowel does matra next)
+      if (!nextIsVowel && i !== w.length - 1) {
+        out += "्";
+      }
+      i++;
+      continue;
+    }
+
+    // unknown char, ignore
+    i++;
+  }
+
+  // strip trailing virama
+  if (out.endsWith("्")) out = out.slice(0, -1);
+  return out || text;
+}
+
+function getTranslatedUnit(unit) {
+  if (!unit) return unit;
+  if (getCurrentLanguage() !== "hi") return unit;
+  const translated = enToDevanagari(unit);
+  return translated || unit;
+}
+
+// ============================================================
+// INDIAN LOCATION → HINDI (state + common district names)
+// ============================================================
+const INDIAN_STATES_HI = {
+  "andhra pradesh": "आंध्र प्रदेश",
+  "arunachal pradesh": "अरुणाचल प्रदेश",
+  assam: "असम",
+  bihar: "बिहार",
+  chhattisgarh: "छत्तीसगढ़",
+  goa: "गोवा",
+  gujarat: "गुजरात",
+  haryana: "हरियाणा",
+  "himachal pradesh": "हिमाचल प्रदेश",
+  "jammu and kashmir": "जम्मू और कश्मीर",
+  "jammu & kashmir": "जम्मू और कश्मीर",
+  jharkhand: "झारखंड",
+  karnataka: "कर्नाटक",
+  kerala: "केरल",
+  "madhya pradesh": "मध्य प्रदेश",
+  maharashtra: "महाराष्ट्र",
+  manipur: "मणिपुर",
+  meghalaya: "मेघालय",
+  mizoram: "मिजोरम",
+  nagaland: "नागालैंड",
+  odisha: "ओडिशा",
+  orissa: "ओडिशा",
+  punjab: "पंजाब",
+  rajasthan: "राजस्थान",
+  sikkim: "सिक्किम",
+  "tamil nadu": "तमिलनाडु",
+  telangana: "तेलंगाना",
+  "uttar pradesh": "उत्तर प्रदेश",
+  "uttarakhand": "उत्तराखंड",
+  "west bengal": "पश्चिम बंगाल",
+  "delhi": "दिल्ली",
+  "andaman & nicobar islands": "अंडमान और निकोबार द्वीपसमूह",
+  "chandigarh": "चंडीगढ़",
+  "pondicherry": "पुडुचेरी",
+  "puducherry": "पुडुचेरी",
+};
+
+const INDIAN_CITIES_HI = {
+  ghaziabad: "गाजियाबाद",
+  lucknow: "लखनऊ",
+  agra: "आगरा",
+  ranchi: "रांची",
+  delhi: "दिल्ली",
+  "new delhi": "नई दिल्ली",
+  kanpur: "कानपुर",
+  varanasi: "वाराणसी",
+  prayagraj: "प्रयागराज",
+  allahabad: "प्रयागराज",
+  mumbai: "मुंबई",
+  kolkata: "कोलकाता",
+  chennai: "चेन्नई",
+  patna: "पटना",
+  jaipur: "जयपुर",
+  pune: "पुणे",
+  hyderabad: "हैदराबाद",
+  indore: "इंदौर",
+  bhopal: "भोपाल",
+  meerut: "मेरठ",
+  noida: "नोएडा",
+  gurgaon: "गुड़गांव",
+  gurugram: "गुड़गांव",
+  lalitpur: "ललितपुर",
+  "jhansi": "झांसी",
+};
+
+function getTranslatedState(state) {
+  if (!state) return "";
+  if (getCurrentLanguage() !== "hi") return state;
+  const key = state.toLowerCase().trim();
+  return INDIAN_STATES_HI[key] || enToDevanagari(state);
+}
+
+function getTranslatedDistrict(district) {
+  if (!district) return "";
+  if (getCurrentLanguage() !== "hi") return district;
+  const key = district.toLowerCase().trim();
+  return INDIAN_CITIES_HI[key] || enToDevanagari(district);
+}
+
+function getTranslatedLocation(district, state) {
+  const d = getTranslatedDistrict(district);
+  const s = getTranslatedState(state);
+  return [d, s].filter(Boolean).join(", ");
+}
+
+function getCropCategory(cropName) {
+  if (!cropName) return "other";
+  const lower = cropName.toLowerCase();
+  if (lower.includes("wheat") || lower.includes("गेहूं") || lower.includes("rice") || lower.includes("paddy") || lower.includes("धान") || lower.includes("चावल") || lower.includes("maize") || lower.includes("मक्का") || lower.includes("barley") || lower.includes("bajra") || lower.includes("jowar")) return "grains";
+  if (lower.includes("potato") || lower.includes("आलू") || lower.includes("onion") || lower.includes("प्याज") || lower.includes("tomato") || lower.includes("टमाटर") || lower.includes("cauliflower") || lower.includes("cabbage") || lower.includes("brinjal") || lower.includes("chilli") || lower.includes("garlic") || lower.includes("ginger")) return "vegetables";
+  if (lower.includes("mango") || lower.includes("आम") || lower.includes("apple") || lower.includes("सेब") || lower.includes("banana") || lower.includes("केला") || lower.includes("orange") || lower.includes("grapes") || lower.includes("papaya") || lower.includes("guava")) return "fruits";
+  if (lower.includes("mustard") || lower.includes("सरसों") || lower.includes("soybean") || lower.includes("gram") || lower.includes("चना") || lower.includes("tur") || lower.includes("arhar") || lower.includes("moong") || lower.includes("urad") || lower.includes("groundnut") || lower.includes("मूंगफली") || lower.includes("pulse")) return "pulses";
+  if (lower.includes("cotton") || lower.includes("कपास") || lower.includes("sugarcane") || lower.includes("गन्ना") || lower.includes("jute") || lower.includes("tobacco") || lower.includes("tea") || lower.includes("coffee")) return "cash";
+  return "other";
+}
+
+// ============================================================
+// COMPREHENSIVE INDIAN STATES & DISTRICTS DIRECTORY
+// ============================================================
+const INDIAN_STATES_AND_DISTRICTS = {
+  "Andhra Pradesh": ["Anantapur", "Chittoor", "East Godavari", "Guntur", "Kadapa", "Krishna", "Kurnool", "Nellore", "Prakasam", "Srikakulam", "Visakhapatnam", "Vizianagaram", "West Godavari"],
+  "Assam": ["Baksa", "Barpeta", "Cachar", "Darrang", "Dhubri", "Dibrugarh", "Goalpara", "Golaghat", "Jorhat", "Kamrup", "Karbi Anglong", "Karimganj", "Lakhimpur", "Nagaon", "Nalbari", "Sivasagar", "Sonitpur", "Tinsukia"],
+  "Bihar": ["Araria", "Arwal", "Aurangabad", "Banka", "Begusarai", "Bhagalpur", "Bhojpur", "Buxar", "Darbhanga", "East Champaran", "Gaya", "Gopalganj", "Jamui", "Jehanabad", "Kaimur", "Katihar", "Khagaria", "Kishanganj", "Lakhisarai", "Madhepura", "Madhubani", "Munger", "Muzaffarpur", "Nalanda", "Nawada", "Patna", "Purnia", "Rohtas", "Saharsa", "Samastipur", "Saran", "Sheikhpura", "Sheohar", "Sitamarhi", "Siwan", "Supaul", "Vaishali", "West Champaran"],
+  "Chhattisgarh": ["Balod", "Baloda Bazar", "Balrampur", "Bastar", "Bemetara", "Bijapur", "Bilaspur", "Dantewada", "Dhamtari", "Durg", "Gariaband", "Janjgir-Champa", "Jashpur", "Kabirdham", "Kanker", "Kondagaon", "Korba", "Koriya", "Mahasamund", "Mungeli", "Narayanpur", "Raigarh", "Raipur", "Rajnandgaon", "Sukma", "Surajpur", "Surguja"],
+  "Delhi": ["Central Delhi", "East Delhi", "New Delhi", "North Delhi", "North East Delhi", "North West Delhi", "Shahdara", "South Delhi", "South East Delhi", "South West Delhi", "West Delhi"],
+  "Gujarat": ["Ahmedabad", "Amreli", "Anand", "Aravalli", "Banaskantha", "Bharuch", "Bhavnagar", "Botad", "Chhota Udaipur", "Dahod", "Dang", "Devbhoomi Dwarka", "Gandhinagar", "Gir Somnath", "Jamnagar", "Junagadh", "Kheda", "Kutch", "Mahisagar", "Mehsana", "Morbi", "Narmada", "Navsari", "Panchmahal", "Patan", "Porbandar", "Rajkot", "Sabarkantha", "Surat", "Surendranagar", "Tapi", "Vadodara", "Valsad"],
+  "Haryana": ["Ambala", "Bhiwani", "Charkhi Dadri", "Faridabad", "Fatehabad", "Gurugram", "Hisar", "Jhajjar", "Jind", "Kaithal", "Karnal", "Kurukshetra", "Mahendragarh", "Nuh", "Palwal", "Panchkula", "Panipat", "Rewari", "Rohtak", "Sirsa", "Sonipat", "Yamunanagar"],
+  "Himachal Pradesh": ["Bilaspur", "Chamba", "Hamirpur", "Kangra", "Kinnaur", "Kullu", "Lahaul and Spiti", "Mandi", "Shimla", "Sirmaur", "Solan", "Una"],
+  "Jammu and Kashmir": ["Anantnag", "Bandipora", "Baramulla", "Budgam", "Doda", "Ganderbal", "Jammu", "Kathua", "Kishtwar", "Kulgam", "Kupwara", "Poonch", "Pulwama", "Rajouri", "Ramban", "Reasi", "Samba", "Shopian", "Srinagar", "Udhampur"],
+  "Jharkhand": ["Bokaro", "Chatra", "Deoghar", "Dhanbad", "Dumka", "East Singhbhum", "Garhwa", "Giridih", "Godda", "Gumla", "Hazaribagh", "Jamtara", "Khunti", "Koderma", "Latehar", "Lohardaga", "Pakur", "Palamu", "Ramgarh", "Ranchi", "Sahebganj", "Seraikela Kharsawan", "Simdega", "West Singhbhum"],
+  "Karnataka": ["Bagalkot", "Ballari", "Belagavi", "Bengaluru Rural", "Bengaluru Urban", "Bidar", "Chamarajanagar", "Chikkaballapur", "Chikkamagaluru", "Chitradurga", "Dakshina Kannada", "Davanagere", "Dharwad", "Gadag", "Hassan", "Haveri", "Kalaburagi", "Kodagu", "Kolar", "Koppal", "Mandya", "Mysuru", "Raichur", "Ramanagara", "Shivamogga", "Tumakuru", "Udupi", "Uttara Kannada", "Vijayapura", "Yadgir"],
+  "Kerala": ["Alappuzha", "Ernakulam", "Idukki", "Kannur", "Kasaragod", "Kollam", "Kottayam", "Kozhikode", "Malappuram", "Palakkad", "Pathanamthitta", "Thiruvananthapuram", "Thrissur", "Wayanad"],
+  "Madhya Pradesh": ["Agar Malwa", "Alirajpur", "Anuppur", "Ashoknagar", "Balaghat", "Barwani", "Betul", "Bhind", "Bhopal", "Burhanpur", "Chhatarpur", "Chhindwara", "Damoh", "Datia", "Dewas", "Dhar", "Dindori", "Guna", "Gwalior", "Harda", "Hoshangabad (Narmadapuram)", "Indore", "Jabalpur", "Jhabua", "Katni", "Khandwa", "Khargone", "Mandla", "Mandsaur", "Morena", "Narsinghpur", "Neemuch", "Panna", "Raisen", "Rajgarh", "Ratlam", "Rewa", "Sagar", "Satna", "Sehore", "Seoni", "Shahdol", "Shajapur", "Sheopur", "Shivpuri", "Sidhi", "Singrauli", "Tikamgarh", "Ujjain", "Umaria", "Vidisha"],
+  "Maharashtra": ["Ahmednagar", "Akola", "Amravati", "Aurangabad (Chhatrapati Sambhajinagar)", "Beed", "Bhandara", "Buldhana", "Chandrapur", "Dhule", "Gadchiroli", "Gondia", "Hingoli", "Jalgaon", "Jalna", "Kolhapur", "Latur", "Mumbai City", "Mumbai Suburban", "Nagpur", "Nanded", "Nandurbar", "Nashik", "Osmanabad (Dharashiv)", "Palghar", "Parbhani", "Pune", "Raigad", "Ratnagiri", "Sangli", "Satara", "Sindhudurg", "Solapur", "Thane", "Wardha", "Washim", "Yavatmal"],
+  "Odisha": ["Angul", "Balangir", "Balasore", "Bargarh", "Bhadrak", "Boudh", "Cuttack", "Deogarh", "Dhenkanal", "Gajapati", "Ganjam", "Jagatsinghpur", "Jajpur", "Jharsuguda", "Kalahandi", "Kandhamal", "Kendrapara", "Kendujhar", "Khordha", "Koraput", "Malkangiri", "Mayurbhanj", "Nabarangpur", "Nayagarh", "Nuapada", "Puri", "Rayagada", "Sambalpur", "Subarnapur", "Sundargarh"],
+  "Punjab": ["Amritsar", "Barnala", "Bathinda", "Faridkot", "Fatehgarh Sahib", "Fazilka", "Ferozepur", "Gurdaspur", "Hoshiarpur", "Jalandhar", "Kapurthala", "Ludhiana", "Mansa", "Moga", "Muktsar", "Pathankot", "Patiala", "Rupnagar", "Sahibzada Ajit Singh Nagar (Mohali)", "Sangrur", "Shahid Bhagat Singh Nagar", "Sri Muktsar Sahib", "Tarn Taran"],
+  "Rajasthan": ["Ajmer", "Alwar", "Banswara", "Baran", "Barmer", "Bharatpur", "Bhilwara", "Bikaner", "Bundi", "Chittorgarh", "Churu", "Dausa", "Dholpur", "Dungarpur", "Hanumangarh", "Jaipur", "Jaisalmer", "Jalore", "Jhalawar", "Jhunjhunu", "Jodhpur", "Karauli", "Kota", "Nagaur", "Pali", "Pratapgarh", "Rajsamand", "Sawai Madhopur", "Sikar", "Sirohi", "Sri Ganganagar", "Tonk", "Udaipur"],
+  "Tamil Nadu": ["Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode", "Kallakurichi", "Kanchipuram", "Kanyakumari", "Karur", "Krishnagiri", "Madurai", "Mayiladuthurai", "Nagapattinam", "Namakkal", "Nilgiris", "Perambalur", "Pudukkottai", "Ramanathapuram", "Ranipet", "Salem", "Sivaganga", "Tenkasi", "Thanjavur", "Theni", "Thoothukudi", "Tiruchirappalli", "Tirunelveli", "Tirupathur", "Tiruppur", "Tiruvallur", "Tiruvannamalai", "Tiruvarur", "Vellore", "Viluppuram", "Virudhunagar"],
+  "Telangana": ["Adilabad", "Bhadradri Kothagudem", "Hyderabad", "Jagtial", "Jangaon", "Jayashankar Bhupalpally", "Jogulamba Gadwal", "Kamareddy", "Karimnagar", "Khammam", "Kumuram Bheem", "Mahabubabad", "Mahabubnagar", "Mancherial", "Medak", "Medchal-Malkajgiri", "Mulugu", "Nagarkurnool", "Nalgonda", "Narayanpet", "Nirmal", "Nizamabad", "Peddapalli", "Rajanna Sircilla", "Rangareddy", "Sangareddy", "Siddipet", "Suryapet", "Vikarabad", "Wanaparthy", "Warangal", "Yadadri Bhuvanagiri"],
+  "Uttar Pradesh": ["Agra", "Aligarh", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", "Ayodhya", "Azamgarh", "Baghpat", "Bahraich", "Ballia", "Balrampur", "Banda", "Barabanki", "Bareilly", "Basti", "Bhadohi", "Bijnor", "Budaun", "Bulandshahr", "Chandauli", "Chitrakoot", "Deoria", "Etah", "Etawah", "Farrukhabad", "Fatehpur", "Firozabad", "Gautam Buddha Nagar", "Ghaziabad", "Ghazipur", "Gonda", "Gorakhpur", "Hamirpur", "Hapur", "Hardoi", "Hathras", "Jalaun", "Jaunpur", "Jhansi", "Kannauj", "Kanpur Dehat", "Kanpur Nagar", "Kasganj", "Kaushambi", "Kheri (Lakhimpur)", "Kushinagar", "Lalitpur", "Lucknow", "Maharajganj", "Mahoba", "Mainpuri", "Mathura", "Mau", "Meerut", "Mirzapur", "Moradabad", "Muzaffarnagar", "Pilibhit", "Pratapgarh", "Prayagraj", "Raebareli", "Rampur", "Saharanpur", "Sambhal", "Sant Kabir Nagar", "Shahjahanpur", "Shamli", "Shrawasti", "Siddharthnagar", "Sitapur", "Sonbhadra", "Sultanpur", "Unnao", "Varanasi"],
+  "Uttarakhand": ["Almora", "Bageshwar", "Chamoli", "Champawat", "Dehradun", "Haridwar", "Nainital", "Pauri Garhwal", "Pithoragarh", "Rudraprayag", "Tehri Garhwal", "Udham Singh Nagar", "Uttarkashi"],
+  "West Bengal": ["Alipurduar", "Bankura", "Birbhum", "Cooch Behar", "Dakshin Dinajpur", "Darjeeling", "Hooghly", "Howrah", "Jalpaiguri", "Jhargram", "Kalimpong", "Kolkata", "Malda", "Murshidabad", "Nadia", "North 24 Parganas", "Paschim Bardhaman", "Paschim Medinipur", "Purba Bardhaman", "Purba Medinipur", "Purulia", "South 24 Parganas", "Uttar Dinajpur"]
+};
+
+function populateStateDropdown(stateSelectEl, defaultState = "", placeholder = "") {
+  if (!stateSelectEl) return;
+  const pText = placeholder || t("selectState", "Select State");
+  const states = Object.keys(INDIAN_STATES_AND_DISTRICTS).sort();
+  stateSelectEl.innerHTML = `<option value="">${pText}</option>` +
+    states.map(s => `<option value="${s}" ${s.toLowerCase() === (defaultState || "").toLowerCase() ? 'selected' : ''}>${s}</option>`).join("");
+}
+
+function populateDistrictDropdown(districtSelectEl, stateName, defaultDistrict = "", placeholder = "") {
+  if (!districtSelectEl) return;
+  const pText = placeholder || t("selectDistrict", "Select District");
+  const districts = (INDIAN_STATES_AND_DISTRICTS[stateName] || []).sort();
+  if (districts.length === 0) {
+    districtSelectEl.innerHTML = `<option value="">${pText}</option>`;
+    return;
+  }
+  districtSelectEl.innerHTML = `<option value="">${pText}</option>` +
+    districts.map(d => `<option value="${d}" ${d.toLowerCase() === (defaultDistrict || "").toLowerCase() ? 'selected' : ''}>${d}</option>`).join("");
+}
+
+function setupStateDistrictPair(stateSelectId, districtSelectId, defaultState = "", defaultDistrict = "") {
+  const stateEl = typeof stateSelectId === 'string' ? document.getElementById(stateSelectId) : stateSelectId;
+  const districtEl = typeof districtSelectId === 'string' ? document.getElementById(districtSelectId) : districtSelectId;
+  if (!stateEl || !districtEl) return;
+
+  populateStateDropdown(stateEl, defaultState);
+  if (defaultState && INDIAN_STATES_AND_DISTRICTS[defaultState]) {
+    populateDistrictDropdown(districtEl, defaultState, defaultDistrict);
+  } else {
+    districtEl.innerHTML = `<option value="">${t("selectDistrict", "Select District")}</option>`;
+  }
+
+  // Remove existing listener clone if any to avoid duplicate attachments
+  const newStateEl = stateEl.cloneNode(true);
+  stateEl.parentNode?.replaceChild(newStateEl, stateEl);
+
+  newStateEl.addEventListener("change", function() {
+    const selectedState = this.value;
+    populateDistrictDropdown(districtEl, selectedState, "");
+  });
+}
+
+function initAllLocationDropdowns() {
+  // Farmer Register
+  setupStateDistrictPair("farmerState", "farmerDistrict", "Uttar Pradesh", "Lucknow");
+  // Buyer Register
+  setupStateDistrictPair("buyerState", "buyerDistrict", "Uttar Pradesh", "Agra");
+  // Produce Drawer
+  setupStateDistrictPair("produceLocation", "produceDistrict", "", "");
+  // Demand Drawer
+  setupStateDistrictPair("demandState", "demandDistrict", "", "");
+  // Demand Edit Modal
+  setupStateDistrictPair("demandEditState", "demandEditDistrict", "", "");
+  // Profile Settings
+  setupStateDistrictPair("profileState", "profileDistrict", "", "");
+  
+  // Search State Filter in Browse Produce
+  const searchStateEl = document.getElementById("searchState");
+  if (searchStateEl && searchStateEl.tagName === "SELECT") {
+    populateStateDropdown(searchStateEl, "", t("allStates", "All States"));
+  }
+}
+
+// Current Language
+function getCurrentLanguage() {
+  return localStorage.getItem("krishisetu_lang") || "en";
+}
+
+function t(key, fallback = "") {
+  const lang = getCurrentLanguage();
+  const dict = KRISHI_I18N[lang] || KRISHI_I18N.en;
+  return dict[key] || KRISHI_I18N.en[key] || fallback || key;
+}
+
+function setLanguage(lang) {
+  if (lang !== "en" && lang !== "hi") lang = "en";
+  localStorage.setItem("krishisetu_lang", lang);
+  applyTranslations();
+  updateLanguageButtons();
+  if (document.getElementById("marketplaceCatPills")) {
+    setupMarketplaceCategoryPills();
+    filterAndRenderMarketCatalog();
+  }
+  if (document.getElementById("produceGrid")) {
+    renderMyProduce();
+  }
+  if (document.getElementById("demandsGrid")) {
+    renderMyDemands();
+  }
+  if (document.getElementById("cropQuickChipsContainer")) {
+    renderCropQuickPicker();
+  }
+  if (document.getElementById("marketPriceGrid")) {
+    loadMarketPrices();
+  }
+  if (document.getElementById("featuredListings")) {
+    loadBuyerDashboard();
+  }
+}
+
+function updateLanguageButtons() {
+  const lang = getCurrentLanguage();
+  document.querySelectorAll(".lang-switcher").forEach(switcher => {
+    switcher.querySelectorAll(".lang-btn").forEach(btn => {
+      const btnLang = btn.getAttribute("data-lang");
+      if (btnLang === lang) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  });
+}
+
+function applyTranslations() {
+  const lang = getCurrentLanguage();
+  const dict = KRISHI_I18N[lang] || KRISHI_I18N.en;
+
+  // Translate all elements with data-i18n attribute
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
+
+  // Translate all inputs with data-i18n-placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (dict[key]) {
+      el.setAttribute("placeholder", dict[key]);
+    }
+  });
+
+  // Update HTML lang attribute
+  document.documentElement.lang = lang;
+}
+
+function initLanguageSwitchers() {
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault();
+      const lang = this.getAttribute("data-lang");
+      if (lang) setLanguage(lang);
+    });
+  });
+  updateLanguageButtons();
+  applyTranslations();
+}
+
+function getTokenRole() {
+  const token = localStorage.getItem("token");
+  if (!token) return null;
+  try {
+    const payload = token.split(".")[1];
+    const decoded = JSON.parse(atob(payload.replace(/-/g, "+").replace(/_/g, "/")));
+    return decoded.role || null;
+  } catch (err) {
+    return null;
+  }
+}
+
+function extractErrorMessage(data, fallback) {
+  if (!data) return fallback;
+  if (typeof data.error === "object" && data.error.message) {
+    return data.error.message;
+  }
+  if (typeof data.error === "string" && data.error) return data.error;
+  if (typeof data.message === "string" && data.message) return data.message;
+  if (typeof data.detail === "string" && data.detail) return data.detail;
+  return fallback;
+}
+
+// Helper to show skeleton cards in any grid container
+function renderSkeletonCards(containerId, count = 3) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  let html = "";
+  for (let i = 0; i < count; i++) {
+    html += `
+      <div class="skeleton-card">
+        <div class="flex justify-between items-center mb-3">
+          <div class="skeleton-box h-4 w-24"></div>
+          <div class="skeleton-box h-4 w-16"></div>
+        </div>
+        <div class="skeleton-box h-6 w-3/4 mb-2"></div>
+        <div class="skeleton-box h-4 w-1/2 mb-4"></div>
+        <div class="pt-3 border-t border-gray-100 flex justify-between items-center">
+          <div class="skeleton-box h-5 w-20"></div>
+          <div class="skeleton-box h-5 w-24"></div>
+        </div>
+      </div>
+    `;
+  }
+  container.innerHTML = html;
+}
+
+// ============================================================
 // ANIMATED FARM SCENERY (login / register backgrounds)
 // ============================================================
 function buildFarmland() {
@@ -115,7 +1331,7 @@ document.addEventListener("DOMContentLoaded", function () {
     buyerLoginForm.classList.add("hidden");
     if (loginFarmerTab) loginFarmerTab.classList.add("active");
     if (loginBuyerTab) loginBuyerTab.classList.remove("active");
-    if (loginTitle) loginTitle.textContent = "Farmer Login";
+    if (loginTitle) loginTitle.textContent = t("farmerLogin");
     if (loginRegisterLink)
       loginRegisterLink.href = "./register.html?role=farmer";
   }
@@ -126,7 +1342,7 @@ document.addEventListener("DOMContentLoaded", function () {
     farmerLoginForm.classList.add("hidden");
     if (loginBuyerTab) loginBuyerTab.classList.add("active");
     if (loginFarmerTab) loginFarmerTab.classList.remove("active");
-    if (loginTitle) loginTitle.textContent = "Buyer Login";
+    if (loginTitle) loginTitle.textContent = t("buyerLogin");
     if (loginRegisterLink)
       loginRegisterLink.href = "./register.html?role=buyer";
   }
@@ -162,21 +1378,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const data = await response.json();
         if (response.ok) {
-          alert("Farmer Login Successful!");
-          if (data.token) localStorage.setItem("token", data.token);
+          alert(t("loginSuccess", "Farmer Login Successful!"));
+          const token = data.data?.token || data.token;
+          if (token) localStorage.setItem("token", token);
           window.location.href = "./farmer-dashboard.html";
         } else {
-          const errorMsg =
-            typeof data.error === "object"
-              ? JSON.stringify(data.error)
-              : data.error ||
-                data.message ||
-                "Login failed! Check credentials.";
-          alert(errorMsg);
+          alert(
+            extractErrorMessage(data, t("loginFailed", "Login failed! Check credentials.")),
+          );
         }
       } catch (error) {
         console.error("Error connecting to backend:", error);
-        alert("Server Error! Render API is waking up, please try again.");
+        alert(t("serverError", "Server Error! Please check your connection and try again."));
       }
     });
   }
@@ -201,21 +1414,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const data = await response.json();
         if (response.ok) {
-          alert("Buyer Login Successful!");
-          if (data.token) localStorage.setItem("token", data.token);
+          alert(t("loginSuccess", "Buyer Login Successful!"));
+          const token = data.data?.token || data.token;
+          if (token) localStorage.setItem("token", token);
           window.location.href = "./buyer-dashboard.html";
         } else {
-          const errorMsg =
-            typeof data.error === "object"
-              ? JSON.stringify(data.error)
-              : data.error ||
-                data.message ||
-                "Login failed! Check credentials.";
-          alert(errorMsg);
+          alert(
+            extractErrorMessage(data, t("loginFailed", "Login failed! Check credentials.")),
+          );
         }
       } catch (error) {
         console.error("Error connecting to backend:", error);
-        alert("Server Error!");
+        alert(t("serverError", "Server Error! Please check your connection and try again."));
       }
     });
   }
@@ -265,26 +1475,25 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       const name = document.getElementById("farmerName")?.value || "";
       const phone = document.getElementById("farmerPhone")?.value || "";
-      const village =
-        document.getElementById("farmerVillage")?.value || "Default Village";
       const district =
-        document.getElementById("farmerDistrict")?.value ||
-        village ||
-        "Default District";
+        document.getElementById("farmerDistrict")?.value || "Default District";
       const state =
         document.getElementById("farmerState")?.value || "Uttar Pradesh";
-      const crop =
-        document.getElementById("farmerCrop")?.value || "General Crop";
       const password = document.getElementById("farmerPassword")?.value || "";
       const confirmPassword =
         document.getElementById("farmerConfirmPassword")?.value || "";
 
       if (password !== confirmPassword) {
-        alert("Passwords do not match!");
+        alert(t("passwordsMismatch", "Passwords do not match!"));
         return;
       }
 
       try {
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = t("publishing", "Publishing...");
+        submitBtn.disabled = true;
+
         const response = await fetch(
           `${API_BASE_URL}/api/v1/farmers/register`,
           {
@@ -293,29 +1502,27 @@ document.addEventListener("DOMContentLoaded", function () {
             body: JSON.stringify({
               name: name,
               phone: phone,
-              village: village,
               district: district,
               state: state,
-              crop: crop,
               password: password,
             }),
           },
         );
 
         const data = await response.json();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
         if (response.ok) {
-          alert("Farmer Registration Successful! Redirecting to Login...");
+          alert(t("registerSuccess", "Registration Successful! Redirecting to Login..."));
           window.location.href = "./login.html?role=farmer";
         } else {
-          const errorMsg =
-            typeof data.error === "object"
-              ? JSON.stringify(data.error)
-              : data.error || data.message || "Registration failed!";
-          alert(errorMsg);
+          alert(
+            extractErrorMessage(data, "Registration failed! Please try again."),
+          );
         }
       } catch (error) {
         console.error("Error connecting to backend:", error);
-        alert("Server Error! Render backend waking up.");
+        alert(t("serverError", "Server Error! Please check your connection and try again."));
       }
     });
   }
@@ -330,12 +1537,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const businessType =
         document.getElementById("businessType")?.value || "Retailer";
       const phone = document.getElementById("buyerPhone")?.value || "";
-      const city =
-        document.getElementById("buyerCity")?.value || "Default City";
       const district =
-        document.getElementById("buyerDistrict")?.value ||
-        city ||
-        "Default District";
+        document.getElementById("buyerDistrict")?.value || "Default District";
       const state =
         document.getElementById("buyerState")?.value || "Uttar Pradesh";
       const password = document.getElementById("buyerPassword")?.value || "";
@@ -343,11 +1546,16 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("buyerConfirmPassword")?.value || "";
 
       if (password !== confirmPassword) {
-        alert("Passwords do not match!");
+        alert(t("passwordsMismatch", "Passwords do not match!"));
         return;
       }
 
       try {
+        const submitBtn = event.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = t("publishing", "Publishing...");
+        submitBtn.disabled = true;
+
         const response = await fetch(`${API_BASE_URL}/api/v1/buyers/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -356,7 +1564,6 @@ document.addEventListener("DOMContentLoaded", function () {
             business_name: businessName,
             business_type: businessType,
             phone: phone,
-            city: city,
             district: district,
             state: state,
             password: password,
@@ -364,19 +1571,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         const data = await response.json();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
         if (response.ok) {
-          alert("Buyer Registration Successful! Redirecting to Login...");
+          alert(t("registerSuccess", "Registration Successful! Redirecting to Login..."));
           window.location.href = "./login.html?role=buyer";
         } else {
-          const errorMsg =
-            typeof data.error === "object"
-              ? JSON.stringify(data.error)
-              : data.error || data.message || "Registration failed!";
-          alert(errorMsg);
+          alert(
+            extractErrorMessage(data, "Registration failed! Please try again."),
+          );
         }
       } catch (error) {
         console.error("Error connecting to backend:", error);
-        alert("Server Error!");
+        alert(t("serverError", "Server Error! Please check your connection and try again."));
       }
     });
   }
@@ -391,8 +1598,106 @@ phoneInputs.forEach((input) => {
 });
 
 // ============================================================
+// ============================================================
 // F5 — CREATE CROP LISTING (POST /api/v1/listings)
 // ============================================================
+function renderCropQuickPicker() {
+  const container = document.getElementById("cropQuickChipsContainer");
+  if (!container) return;
+
+  const currentLang = getCurrentLanguage();
+  container.innerHTML = POPULAR_CROPS.map((crop) => {
+    const displayName = currentLang === "hi" ? crop.nameHi : crop.nameEn;
+    const subName = currentLang === "hi" ? crop.nameEn : crop.nameHi;
+    return `
+      <div class="crop-chip" data-crop-id="${crop.id}" data-crop-name="${crop.nameEn}" data-unit="${crop.unit}" data-price="${crop.avgPrice}" data-min="${crop.minPrice}" data-max="${crop.maxPrice}">
+        <span class="crop-chip-icon">${crop.icon}</span>
+        <span class="crop-chip-name">${displayName}</span>
+        <span class="crop-chip-sub">${subName}</span>
+      </div>
+    `;
+  }).join("");
+
+  container.querySelectorAll(".crop-chip").forEach((chip) => {
+    chip.addEventListener("click", function () {
+      container.querySelectorAll(".crop-chip").forEach((c) => c.classList.remove("active"));
+      this.classList.add("active");
+
+      const cropName = this.getAttribute("data-crop-name");
+      const unit = this.getAttribute("data-unit");
+      const avgPrice = this.getAttribute("data-price");
+      const minPrice = this.getAttribute("data-min");
+      const maxPrice = this.getAttribute("data-max");
+
+      const nameInput = document.getElementById("produceName");
+      const unitSelect = document.getElementById("produceUnit");
+      const priceInput = document.getElementById("producePrice");
+
+      if (nameInput) nameInput.value = cropName;
+      if (unitSelect && unit) unitSelect.value = unit;
+
+      // Show Mandi Benchmark Helper Card
+      const helperEl = document.getElementById("mandiBenchmarkHelper");
+      if (helperEl) {
+        helperEl.innerHTML = `
+          <div class="mandi-benchmark-card">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="mandi-rate-badge">📈 ${t("mandiBenchmark")}: ₹${Number(avgPrice).toLocaleString("en-IN")}/${unit}</span>
+              <button type="button" class="btn-use-rate" onclick="document.getElementById('producePrice').value='${avgPrice}'">✓ ${t("useMandiRate")}</button>
+            </div>
+            <p class="text-[11px] text-[#40493D]">${t("suggestedRange")}: ₹${Number(minPrice).toLocaleString("en-IN")} – ₹${Number(maxPrice).toLocaleString("en-IN")} / ${unit}</p>
+          </div>
+        `;
+        helperEl.classList.remove("hidden");
+      }
+    });
+  });
+}
+
+function openCreateListingDrawer() {
+  const drawer = document.getElementById("createListingDrawer");
+  const backdrop = document.getElementById("drawerBackdrop");
+  if (backdrop) {
+    backdrop.classList.remove("hidden");
+    setTimeout(() => backdrop.classList.remove("opacity-0"), 10);
+  }
+  if (drawer) {
+    drawer.classList.remove("translate-x-full");
+  }
+
+  // Render crop quick picker chips
+  renderCropQuickPicker();
+
+  // Auto-fill state and district from cached profile
+  try {
+    let defState = "Uttar Pradesh";
+    let defDistrict = "Lucknow";
+    const cachedProfile = localStorage.getItem("krishisetu_profile");
+    if (cachedProfile) {
+      const user = JSON.parse(cachedProfile);
+      if (user.state) defState = user.state;
+      if (user.district || user.city) defDistrict = user.district || user.city;
+    }
+    setupStateDistrictPair("produceLocation", "produceDistrict", defState, defDistrict);
+  } catch (err) {
+    console.error("Error auto-filling location:", err);
+  }
+}
+
+function closeCreateListingDrawer() {
+  const drawer = document.getElementById("createListingDrawer");
+  const backdrop = document.getElementById("drawerBackdrop");
+  if (drawer) drawer.classList.add("translate-x-full");
+  if (backdrop) {
+    backdrop.classList.add("opacity-0");
+    setTimeout(() => backdrop.classList.add("hidden"), 300);
+  }
+}
+
+document
+  .getElementById("drawerBackdrop")
+  ?.addEventListener("click", closeCreateListingDrawer);
+
 document
   .getElementById("createListingForm")
   ?.addEventListener("submit", async function (e) {
@@ -400,7 +1705,7 @@ document
 
     const token = localStorage.getItem("token");
     if (!token) {
-      alert("Session expired. Please login again.");
+      alert(t("sessionExpired", "Session expired. Please login again."));
       window.location.href = "./login.html?role=farmer";
       return;
     }
@@ -411,14 +1716,14 @@ document
       unit: document.getElementById("produceUnit")?.value,
       price: parseFloat(document.getElementById("producePrice")?.value),
       state: document.getElementById("produceLocation")?.value.trim(),
-      district: document.getElementById("produceLocation")?.value.trim(),
+      district: document.getElementById("produceDistrict")?.value.trim(),
       description: document.getElementById("produceDesc")?.value || "",
     };
 
     try {
       const submitBtn = e.target.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = "Publishing...";
+      submitBtn.textContent = t("publishing", "Publishing...");
       submitBtn.disabled = true;
 
       const response = await fetch(`${API_BASE_URL}/api/v1/listings`, {
@@ -435,7 +1740,7 @@ document
       submitBtn.disabled = false;
 
       if (response.ok) {
-        alert("Crop listed successfully! 🌾");
+        alert(t("cropListedSuccess", "Crop listed successfully! 🌾"));
         const drawer = document.getElementById("createListingDrawer");
         const backdrop = document.getElementById("drawerBackdrop");
         if (drawer) drawer.classList.add("translate-x-full");
@@ -444,22 +1749,36 @@ document
           setTimeout(() => backdrop.classList.add("hidden"), 300);
         }
         e.target.reset();
+        const helperEl = document.getElementById("mandiBenchmarkHelper");
+        if (helperEl) helperEl.classList.add("hidden");
+        document.querySelectorAll(".crop-chip").forEach((c) => c.classList.remove("active"));
         window.dispatchEvent(new Event("listingCreated"));
       } else {
-        alert(data.message || data.error || "Failed to create crop listing.");
+        alert(extractErrorMessage(data, t("listCreateFail", "Failed to create crop listing.")));
       }
     } catch (err) {
       console.error("Error creating listing:", err);
-      alert("Server error. Please check your connection and try again.");
+      alert(t("serverError", "Server error. Please check your connection and try again."));
     }
   });
 
 // ============================================================
 // MY PRODUCE (F6, F8, F9) — GET / EDIT / DELETE
 // ============================================================
+let currentListings = [];
+
 async function renderMyProduce() {
   const produceGrid = document.getElementById("produceGrid");
   if (!produceGrid) return;
+
+  const statusFilter =
+    typeof document.getElementById("statusFilter")?.value === "string"
+      ? document.getElementById("statusFilter").value
+      : "";
+  const search =
+    typeof document.getElementById("searchInput")?.value === "string"
+      ? document.getElementById("searchInput").value
+      : "";
 
   const token = localStorage.getItem("token");
   if (!token) {
@@ -479,17 +1798,52 @@ async function renderMyProduce() {
     const data = await response.json();
 
     if (response.ok && Array.isArray(data)) {
-      if (data.length === 0) {
+      currentListings = data;
+      const total = data.length;
+      const active = data.filter((l) => l.status === "ACTIVE").length;
+      const pending = data.filter((l) => l.status === "PENDING").length;
+      const sold = data.filter(
+        (l) => l.status === "SOLD" || l.status === "COMPLETED",
+      ).length;
+
+      const elTotal = document.getElementById("statTotal");
+      const elActive = document.getElementById("statActive");
+      const elPending = document.getElementById("statPending");
+      const elSold = document.getElementById("statSold");
+      if (elTotal) elTotal.textContent = total;
+      if (elActive) elActive.textContent = active;
+      if (elPending) elPending.textContent = pending;
+      if (elSold) elSold.textContent = sold;
+
+      const status = (statusFilter || "").toUpperCase();
+      const term = (search || "").trim().toLowerCase();
+
+      const visible = data.filter((item) => {
+        const matchStatus = !status || (item.status || "ACTIVE") === status;
+        const matchSearch =
+          !term ||
+          (item.crop || "").toLowerCase().includes(term) ||
+          getTranslatedCropName(item.crop).toLowerCase().includes(term);
+        return matchStatus && matchSearch;
+      });
+
+      if (visible.length === 0) {
         produceGrid.innerHTML = `
           <div class="col-span-full flex flex-col items-center justify-center py-16 text-center">
             <div class="text-4xl mb-4">🌾</div>
-            <h3 class="text-lg font-bold text-[#181D17] mb-1">No produce listed yet</h3>
-            <p class="text-sm text-[#40493D]">Use the "+ Add Produce" button to post your first crop listing to the marketplace.</p>
+            <h3 class="text-lg font-bold text-[#181D17] mb-1">${
+              total === 0 ? "No produce listed yet" : "No results found"
+            }</h3>
+            <p class="text-sm text-[#40493D]">${
+              total === 0
+                ? 'Use the "+ Add Produce" button to post your first crop listing to the marketplace.'
+                : "Try adjusting your status filter or search term."
+            }</p>
           </div>`;
         return;
       }
 
-      produceGrid.innerHTML = data
+      produceGrid.innerHTML = visible
         .map(
           (item, idx) => `
         <div class="glass-card rounded-2xl border border-[#E0E4DA]/60 p-5 shadow-sm hover:-translate-y-1.5 hover:shadow-lg ksetu-fade-up" style="animation-delay:${idx * 60}ms">
@@ -501,19 +1855,24 @@ async function renderMyProduce() {
                   ? "pending"
                   : "delivered"
             }">${item.status || "ACTIVE"}</span>
-            <span class="text-xs text-[#40493D]">📍 ${item.district || ""}, ${item.state || ""}</span>
+            <span class="text-xs text-[#40493D]">📍 ${getTranslatedLocation(item.district, item.state)}</span>
           </div>
-          <h3 class="text-lg font-bold text-[#181D17]">${item.crop}</h3>
-          <p class="text-xs text-[#40493D] mt-1">${item.description || "No description provided"}</p>
+          <h3 class="text-lg font-bold text-[#181D17]">${getTranslatedCropName(item.crop)}</h3>
+          <p class="text-xs text-[#40493D] mt-1">${item.description || t("noDescription", "No description provided")}</p>
 
           <div class="mt-4 pt-4 border-t border-[#F1F5EB] flex justify-between items-center">
             <div>
-              <p class="text-xs text-[#40493D]">Quantity: <strong class="text-[#181D17]">${item.quantity} ${item.unit}</strong></p>
-              <p class="text-lg font-bold brand-name">₹${item.price} / ${item.unit}</p>
+              <p class="text-xs text-[#40493D]">Quantity: <strong class="text-[#181D17]">${item.quantity} ${getTranslatedUnit(item.unit)}</strong></p>
+              <p class="text-lg font-bold brand-name">₹${item.price} / ${getTranslatedUnit(item.unit)}</p>
             </div>
             <div class="flex gap-2">
-              <button onclick="openEditModal('${item.id}', ${item.price}, ${item.quantity})" class="px-3 py-1.5 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-semibold rounded-xl hover:bg-amber-100 transition-colors">✏️ Edit</button>
-              <button onclick="deleteListing('${item.id}')" class="px-3 py-1.5 bg-red-50 text-red-600 border border-red-200 text-xs font-semibold rounded-xl hover:bg-red-100 transition-colors">🗑 Cancel</button>
+              <button onclick="openEditModal('${item.id}', ${item.price}, ${item.quantity})" class="px-3 py-1.5 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-semibold rounded-xl hover:bg-amber-100 transition-colors">✏️ ${t("edit")}</button>
+              ${
+                item.status === "SOLD"
+                  ? ""
+                  : `<button onclick="openListingMatches('${item.id}')" class="px-3 py-1.5 bg-[#0D631B] text-white text-xs font-semibold rounded-xl hover:bg-[#2E7D32] transition-colors">🔍 ${t("viewMatches")}</button>`
+              }
+              <button onclick="deleteListing('${item.id}')" class="px-3 py-1.5 bg-red-50 text-red-600 border border-red-200 text-xs font-semibold rounded-xl hover:bg-red-100 transition-colors">🗑 ${t("delete")}</button>
             </div>
           </div>
         </div>
@@ -521,7 +1880,7 @@ async function renderMyProduce() {
         )
         .join("");
     } else {
-      produceGrid.innerHTML = `<p class="text-red-600">Failed to load produce: ${data.message || "Error occurred"}</p>`;
+      produceGrid.innerHTML = `<p class="text-red-600">${t("failedLoadProduce", "Failed to load produce")}: ${data.message || t("errorOccurred", "Error occurred")}</p>`;
     }
   } catch (err) {
     console.error("Error fetching My Produce:", err);
@@ -565,7 +1924,7 @@ document
       });
 
       if (res.ok) {
-        alert("Listing updated successfully!");
+        alert(t("listingUpdated", "Listing updated successfully!"));
         closeEditModal();
         renderMyProduce();
       } else {
@@ -590,7 +1949,7 @@ async function deleteListing(id) {
     });
 
     if (res.ok) {
-      alert("Listing canceled successfully!");
+      alert(t("listingCanceled", "Listing canceled successfully!"));
       renderMyProduce();
     } else {
       alert("Failed to cancel listing.");
@@ -603,12 +1962,99 @@ async function deleteListing(id) {
 document.addEventListener("DOMContentLoaded", renderMyProduce);
 window.addEventListener("listingCreated", renderMyProduce);
 
+document.addEventListener("DOMContentLoaded", () => {
+  const statusFilter = document.getElementById("statusFilter");
+  const searchInput = document.getElementById("searchInput");
+  if (!statusFilter && !searchInput) return;
+  statusFilter?.addEventListener("change", renderMyProduce);
+  searchInput?.addEventListener("input", renderMyProduce);
+});
+
 // ============================================================
 // F10, F11, F12 — BUYER MARKETPLACE CATALOG & DETAILS DRAWER
 // ============================================================
+let activeMarketCategory = "all";
+let rawMarketListings = [];
+
+function setupMarketplaceCategoryPills() {
+  const container = document.getElementById("marketplaceCatPills");
+  if (!container) return;
+
+  const categories = [
+    { id: "all", key: "catAll", icon: "🌐" },
+    { id: "grains", key: "catGrains", icon: "🌾" },
+    { id: "vegetables", key: "catVegetables", icon: "🥦" },
+    { id: "fruits", key: "catFruits", icon: "🍎" },
+    { id: "pulses", key: "catPulses", icon: "🫘" },
+    { id: "cash", key: "catCashCrops", icon: "🌿" },
+  ];
+
+  container.innerHTML = categories.map(cat => `
+    <button type="button" class="cat-pill ${cat.id === activeMarketCategory ? 'active' : ''}" data-cat="${cat.id}">
+      <span>${t(cat.key)}</span>
+    </button>
+  `).join("");
+
+  container.querySelectorAll(".cat-pill").forEach(btn => {
+    btn.addEventListener("click", function () {
+      container.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
+      this.classList.add("active");
+      activeMarketCategory = this.getAttribute("data-cat");
+      filterAndRenderMarketCatalog();
+    });
+  });
+}
+
+function filterAndRenderMarketCatalog() {
+  const grid = document.getElementById("marketplaceCatalogGrid");
+  if (!grid) return;
+
+  let filtered = rawMarketListings;
+  if (activeMarketCategory && activeMarketCategory !== "all") {
+    filtered = filtered.filter(item => getCropCategory(item.crop) === activeMarketCategory);
+  }
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="col-span-full flex flex-col items-center justify-center py-16 text-center">
+        <div class="text-4xl mb-3">🌾</div>
+        <h3 class="text-lg font-bold text-[#181D17] mb-1">${t("noListingsYet")}</h3>
+        <p class="text-sm text-[#40493D] max-w-md">${t("noListingsDesc")}</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered
+    .map(
+      (item, idx) => `
+    <div class="glass-card rounded-2xl border border-[#E0E4DA]/60 p-5 shadow-sm flex flex-col justify-between hover:-translate-y-1.5 ksetu-fade-up" style="animation-delay:${idx * 50}ms">
+      <div>
+        <div class="flex justify-between items-start mb-2">
+          <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-green-100 text-[#0D631B] flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#0D631B]"></span>${t("verifiedUser")}</span>
+          <span class="text-xs text-[#40493D]">${getTranslatedLocation(item.district, item.state)}</span>
+        </div>
+        <h3 class="text-lg font-bold text-[#181D17]">${getTranslatedCropName(item.crop)}</h3>
+        <p class="text-xs text-[#40493D] mt-1 line-clamp-2">${item.description || t("freshFarmHarvest", "Fresh farm harvest")}</p>
+        <div class="mt-4 pt-4 border-t border-[#F1F5EB] flex items-end justify-between">
+          <p class="text-xs text-[#40493D]">${t("quantity")}: <strong class="text-[#181D17]">${item.quantity} ${getTranslatedUnit(item.unit)}</strong></p>
+          <p class="text-lg font-bold gradient-text-warm">₹${Number(item.price).toLocaleString("en-IN")}/<span class="text-xs">${getTranslatedUnit(item.unit)}</span></p>
+        </div>
+      </div>
+      <button onclick="showListingDetails(${item.id}, '${getTranslatedCropName(item.crop)}', '${item.quantity} ${getTranslatedUnit(item.unit)}', '₹${item.price} / ${getTranslatedUnit(item.unit)}', '${getTranslatedLocation(item.district, item.state)}')" class="btn-warm w-full mt-4 py-2.5 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5">
+        <span>👀</span> ${t("viewDetails")}
+      </button>
+    </div>
+  `,
+    )
+    .join("");
+}
+
 async function loadBrowseCatalog(crop = "", state = "") {
   const grid = document.getElementById("marketplaceCatalogGrid");
   if (!grid) return;
+
+  setupMarketplaceCategoryPills();
+  renderSkeletonCards("marketplaceCatalogGrid", 6);
 
   const token = localStorage.getItem("token");
 
@@ -632,44 +2078,14 @@ async function loadBrowseCatalog(crop = "", state = "") {
     const data = await res.json();
 
     if (res.ok && Array.isArray(data)) {
-      if (data.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full flex flex-col items-center justify-center py-16 text-center">
-            <div class="text-4xl mb-4">📦</div>
-            <h3 class="text-lg font-bold text-[#181D17] mb-1">No listings found</h3>
-            <p class="text-sm text-[#40493D]">No produce matches your search. Try adjusting your filter criteria or check back later.</p>
-          </div>`;
-        return;
-      }
-
-      grid.innerHTML = data
-        .map(
-          (item, idx) => `
-        <div class="glass-card rounded-2xl border border-[#E0E4DA]/60 p-5 shadow-sm flex flex-col justify-between hover:-translate-y-1.5 ksetu-fade-up" style="animation-delay:${idx * 60}ms">
-          <div>
-            <div class="flex justify-between items-start mb-2">
-              <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-green-100 text-[#0D631B] flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#0D631B]"></span>VERIFIED FARMER</span>
-              <span class="text-xs text-[#40493D]">${item.district || ""}, ${item.state || ""}</span>
-            </div>
-            <h3 class="text-lg font-bold text-[#181D17]">${item.crop}</h3>
-            <p class="text-xs text-[#40493D] mt-1 line-clamp-2">${item.description || "Fresh farm harvest"}</p>
-            <div class="mt-4 pt-4 border-t border-[#F1F5EB] flex items-end justify-between">
-              <p class="text-xs text-[#40493D]">Quantity: <strong class="text-[#181D17]">${item.quantity} ${item.unit}</strong></p>
-              <p class="text-lg font-bold gradient-text-warm">₹${item.price}/<span class="text-xs">${item.unit}</span></p>
-            </div>
-          </div>
-          <button onclick="showListingDetails('${item.crop}', '${item.quantity} ${item.unit}', '₹${item.price} / ${item.unit}', '${item.district || ""}, ${item.state || ""}')" class="btn-warm w-full mt-4 py-2.5 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5">
-            <span>👀</span> View Details & Offer
-          </button>
-        </div>
-      `,
-        )
-        .join("");
+      rawMarketListings = data;
+      filterAndRenderMarketCatalog();
     } else {
-      grid.innerHTML = `<p class="text-red-600">Failed to fetch marketplace catalog.</p>`;
+      grid.innerHTML = `<p class="text-red-600 font-medium py-8 text-center">${t("noListingsYet")}</p>`;
     }
   } catch (err) {
     console.error("Fetch Catalog Error:", err);
+    grid.innerHTML = `<p class="text-red-600 font-medium py-8 text-center">Connection error. Please refresh.</p>`;
   }
 }
 
@@ -684,10 +2100,21 @@ document
   });
 
 // Drawer Controls (F12)
-function showListingDetails(crop, qty, price, location) {
+let currentOfferListingId = null;
+
+function showListingDetails(listingId, crop, qtyLabel, priceLabel, location) {
+  const listingContainer = document.getElementById("listingDetailsDrawer");
+  currentOfferListingId = listingId;
+  if (listingContainer) {
+    const listingInfoEl = document.getElementById("offerListingInfo");
+    if (listingInfoEl) {
+      listingInfoEl.textContent = `${crop} — ${qtyLabel} at ${priceLabel}`;
+    }
+  }
+
   document.getElementById("drawerCropTitle").textContent = crop;
-  document.getElementById("drawerQty").textContent = qty;
-  document.getElementById("drawerPrice").textContent = price;
+  document.getElementById("drawerQty").textContent = qtyLabel;
+  document.getElementById("drawerPrice").textContent = priceLabel;
   document.getElementById("drawerLocation").textContent = location;
 
   const backdrop = document.getElementById("listingDrawerBackdrop");
@@ -709,19 +2136,43 @@ function closeListingDrawer() {
   setTimeout(() => backdrop?.classList.add("hidden"), 300);
 }
 
-// Offer Modal Handlers (UI Only placeholder)
+// Offer Modal Handlers
 function openOfferModal() {
-  document.getElementById("offerModalBackdrop")?.classList.remove("hidden");
+  const backdrop = document.getElementById("offerModalBackdrop");
+  const qty = document.getElementById("offerQuantity");
+  const price = document.getElementById("offerPrice");
+  const message = document.getElementById("offerMessage");
+  if (qty) qty.value = "";
+  if (price) price.value = "";
+  if (message) message.value = "";
+  backdrop?.classList.remove("hidden");
 }
 
 function closeOfferModal() {
   document.getElementById("offerModalBackdrop")?.classList.add("hidden");
 }
 
-function submitOfferPlaceholder() {
-  alert("Offer sent successfully! (UI feature placeholder)");
-  closeOfferModal();
-  closeListingDrawer();
+async function submitOfferFromModal() {
+  const quantity = parseFloat(document.getElementById("offerQuantity")?.value);
+  const price = parseFloat(document.getElementById("offerPrice")?.value);
+  const message = document.getElementById("offerMessage")?.value || "";
+
+  if (!currentOfferListingId) {
+    alert("Missing listing information. Please try again.");
+    return;
+  }
+
+  if (!quantity || quantity <= 0) {
+    alert(t("validQuantityMsg", "Please enter a valid quantity."));
+    return;
+  }
+
+  if (!price || price < 0) {
+    alert(t("validPriceMsg", "Please enter a valid offered price."));
+    return;
+  }
+
+  await submitOffer(currentOfferListingId, quantity, price, message);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -742,6 +2193,21 @@ function openDemandDrawer() {
       backdrop.classList.remove("opacity-0");
       drawer.classList.remove("translate-x-full");
     }, 10);
+  }
+
+  // Auto-fill state and district from cached buyer profile
+  try {
+    let defState = "Uttar Pradesh";
+    let defDistrict = "Agra";
+    const cachedProfile = localStorage.getItem("krishisetu_profile");
+    if (cachedProfile) {
+      const user = JSON.parse(cachedProfile);
+      if (user.state) defState = user.state;
+      if (user.district || user.city) defDistrict = user.district || user.city;
+    }
+    setupStateDistrictPair("demandState", "demandDistrict", defState, defDistrict);
+  } catch (err) {
+    console.error("Error auto-filling demand location:", err);
   }
 }
 
@@ -765,13 +2231,13 @@ document
     const token = localStorage.getItem("token");
 
     if (!token) {
-      alert("Session expired. Please login again.");
+      alert(t("sessionExpired", "Session expired. Please login again."));
       window.location.href = "./login.html?role=buyer";
       return;
     }
 
     const payload = {
-      crop: document.getElementById("demandCrop")?.value.trim(),
+      crop_name: document.getElementById("demandCrop")?.value.trim(),
       quantity: parseFloat(document.getElementById("demandQuantity")?.value),
       unit: document.getElementById("demandUnit")?.value,
       target_price: parseFloat(
@@ -779,13 +2245,13 @@ document
       ),
       state: document.getElementById("demandState")?.value.trim(),
       district: document.getElementById("demandDistrict")?.value.trim(),
-      description: document.getElementById("demandDescription")?.value || "",
+      required_by: document.getElementById("demandRequiredBy")?.value || "",
     };
 
     try {
       const submitBtn = e.target.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = "Publishing...";
+      submitBtn.textContent = t("publishing", "Publishing...");
       submitBtn.disabled = true;
 
       const res = await fetch(
@@ -804,12 +2270,12 @@ document
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
       if (res.ok) {
-        alert("Requirement posted successfully!");
+        alert(t("demandPosted", "Requirement posted successfully!"));
         closeDemandDrawer();
         e.target.reset();
         renderMyDemands();
       } else {
-        alert(data.message || data.error || "Failed to post requirement.");
+        alert(extractErrorMessage(data, t("demandPostFail", "Failed to post requirement.")));
       }
     } catch (err) {
       console.error("Error posting demand:", err);
@@ -817,6 +2283,8 @@ document
   });
 
 // 2. Render My Demands (GET /api/v1/demands/my)
+let currentDemands = [];
+
 async function renderMyDemands() {
   const demandsGrid = document.getElementById("demandsGrid");
   if (!demandsGrid) return;
@@ -841,6 +2309,7 @@ async function renderMyDemands() {
 
     const data = await res.json();
     if (res.ok && Array.isArray(data)) {
+      currentDemands = data;
       if (data.length === 0) {
         demandsGrid.innerHTML = `
           <div class="col-span-full flex flex-col items-center justify-center py-16 text-center">
@@ -857,15 +2326,23 @@ async function renderMyDemands() {
         <div class="glass-card rounded-2xl border border-[#E0E4DA]/60 p-5 shadow-sm hover:-translate-y-1 ksetu-fade-up" style="animation-delay:${idx * 60}ms">
           <div class="flex justify-between items-start mb-2">
             <span class="status-badge pending">${item.status || "OPEN"}</span>
-            <span class="text-xs text-[#40493D]">📍 ${item.district || ""}, ${item.state || ""}</span>
+            <span class="text-xs text-[#40493D]">📍 ${getTranslatedLocation(item.district, item.state)}</span>
           </div>
-          <h3 class="text-lg font-bold text-[#181D17]">${item.crop}</h3>
-          <p class="text-xs text-[#40493D] mt-1">${item.description || "No additional specs"}</p>
+          <h3 class="text-lg font-bold text-[#181D17]">${getTranslatedCropName(item.crop_name)}</h3>
+          <p class="text-xs text-[#40493D] mt-1">${t("requirementBy")} ${item.required_by ? String(item.required_by).slice(0, 10) : t("asap")}</p>
           <div class="mt-4 pt-4 border-t border-[#F1F5EB] flex justify-between items-center">
             <div>
-              <p class="text-xs text-[#40493D]">Required: <strong class="text-[#181D17]">${item.quantity} ${item.unit}</strong></p>
-              <p class="text-lg font-bold gradient-text-warm">Max ₹${item.target_price} / ${item.unit}</p>
+              <p class="text-xs text-[#40493D]">${t("quantity")}: <strong class="text-[#181D17]">${item.quantity} ${getTranslatedUnit(item.unit)}</strong></p>
+              <p class="text-lg font-bold gradient-text-warm">${t("maxBudget")} ₹${item.target_price} / ${getTranslatedUnit(item.unit)}</p>
             </div>
+            ${
+              item.status === "ACTIVE"
+                ? `<div class="flex gap-2">
+              <button onclick="openDemandEditModal('${item.id}')" class="px-3 py-1.5 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-semibold rounded-xl hover:bg-amber-100 transition-colors">✏️ ${t("edit")}</button>
+              <button onclick="openDemandMatches('${item.id}')" class="px-3 py-1.5 bg-[#75584D] text-white text-xs font-semibold rounded-xl hover:bg-[#5c443b] transition-colors">🔍 ${t("viewMatches")}</button>
+            </div>`
+                : `<a href="./browse-produce.html" class="px-3 py-1.5 bg-[#75584D] text-white text-xs font-semibold rounded-xl hover:bg-[#5c443b] transition-colors">🔍 ${t("viewMatches")}</a>`
+            }
           </div>
         </div>
       `,
@@ -880,6 +2357,323 @@ async function renderMyDemands() {
 }
 
 document.addEventListener("DOMContentLoaded", renderMyDemands);
+
+// ============================================================
+// DEMAND EDIT (PUT /api/v1/demands/:id)
+// ============================================================
+function findDemandInCache(id) {
+  return currentDemands.find((d) => String(d.id) === String(id)) || null;
+}
+
+function openDemandEditModal(id) {
+  const modal = document.getElementById("demandEditModal");
+  const demand = findDemandInCache(id);
+  if (!modal || !demand) return;
+
+  document.getElementById("demandEditId").value = demand.id;
+  document.getElementById("demandEditCrop").value = demand.crop_name || "";
+  document.getElementById("demandEditQuantity").value =
+    demand.quantity != null ? demand.quantity : "";
+  document.getElementById("demandEditUnit").value = demand.unit || "";
+  document.getElementById("demandEditTargetPrice").value =
+    demand.target_price != null ? demand.target_price : "";
+  document.getElementById("demandEditState").value = demand.state || "";
+  document.getElementById("demandEditDistrict").value =
+    demand.district || "";
+  const rb = demand.required_by
+    ? String(demand.required_by).slice(0, 10)
+    : "";
+  document.getElementById("demandEditRequiredBy").value = rb;
+
+  modal.classList.remove("hidden");
+}
+
+function closeDemandEditModal() {
+  document.getElementById("demandEditModal")?.classList.add("hidden");
+}
+
+document
+  .getElementById("demandEditForm")
+  ?.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const id = document.getElementById("demandEditId").value;
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert(t("sessionExpired", "Session expired. Please login again."));
+      window.location.href = "./login.html?role=buyer";
+      return;
+    }
+
+    const payload = {
+      crop_name: document.getElementById("demandEditCrop").value.trim(),
+      quantity: parseFloat(
+        document.getElementById("demandEditQuantity").value,
+      ),
+      unit: document.getElementById("demandEditUnit").value,
+      target_price: parseFloat(
+        document.getElementById("demandEditTargetPrice").value,
+      ),
+      state: document.getElementById("demandEditState").value.trim(),
+      district: document.getElementById("demandEditDistrict").value.trim(),
+      required_by:
+        document.getElementById("demandEditRequiredBy").value || "",
+    };
+
+    try {
+      const res = await fetch(
+        `${API_BASE_URL}/api/v1/demands/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(payload),
+        },
+      );
+      const data = await res.json();
+
+      if (res.ok) {
+        alert(t("demandUpdated", "Requirement updated successfully!"));
+        closeDemandEditModal();
+        renderMyDemands();
+      } else {
+        alert(
+          extractErrorMessage(data, "Failed to update requirement."),
+        );
+      }
+    } catch (err) {
+      console.error("Error updating demand:", err);
+      alert(t("serverError", "Server error. Please check your connection and try again."));
+    }
+  });
+
+// ============================================================
+// MATCHING UI (farmer → matched buyer demands / buyer → matched farmer listings)
+// ============================================================
+function findListingInCache(id) {
+  return currentListings.find((l) => String(l.id) === String(id)) || null;
+}
+
+function matchLevelClass(score) {
+  if (score >= 90) return "accepted";
+  if (score >= 75) return "pending";
+  if (score >= 60) return "";
+  return "rejected";
+}
+
+function matchScoreColor(pct) {
+  if (pct >= 75) return "bg-[#0D631B]";
+  if (pct >= 60) return "bg-amber-500";
+  return "bg-[#9B7B6C]";
+}
+
+function matchCardHtml(match, detail, mode) {
+  const pct = Math.round(match.score);
+  const loc = detail
+    ? getTranslatedLocation(detail.district, detail.state)
+    : "";
+  const title =
+    mode === "farmer"
+      ? detail
+        ? getTranslatedCropName(detail.crop_name) || "Buyer Requirement"
+        : `Buyer Demand #${match.demand_id}`
+      : detail
+        ? getTranslatedCropName(detail.crop) || "Farmer Listing"
+        : `Farmer Listing #${match.listing_id}`;
+
+  const reasonList =
+    match.reasons && match.reasons.length
+      ? match.reasons
+          .map(
+            (r) =>
+              `<li class="flex items-start gap-2 text-xs text-[#40493D]"><span class="text-[#0D631B] font-bold mt-0.5">✓</span><span>${r}</span></li>`,
+          )
+          .join("")
+      : `<li class="flex items-start gap-2 text-xs text-[#40493D]">No match notes available.</li>`;
+
+  return `
+    <div class="glass-card rounded-2xl border border-[#E0E4DA]/60 p-5 shadow-sm ksetu-fade-up">
+      <div class="flex justify-between items-start gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-lg font-bold text-white ${matchScoreColor(pct)}">${pct}%</div>
+          <div>
+            <h4 class="font-bold text-[#181D17]">${title}</h4>
+            <span class="status-badge ${matchLevelClass(pct)}">${match.level || "Match"}</span>
+          </div>
+        </div>
+        <span class="text-xs text-[#40493D]">📍 ${loc || t("locationUnknown", "Location unknown")}</span>
+      </div>
+      ${
+        detail
+          ? `<div class="mt-3 pt-3 border-t border-[#F1F5EB] grid grid-cols-2 gap-2 text-xs">
+              ${
+                mode === "farmer"
+                  ? `<span class="text-[#40493D]">${t("requiredQty", "Required Qty")}: <strong class="text-[#181D17]">${detail.quantity} ${getTranslatedUnit(detail.unit)}</strong></span>
+                     <span class="text-[#40493D]">${t("maxBudget", "Max Budget")}: <strong class="text-[#181D17]">₹${detail.target_price} / ${getTranslatedUnit(detail.unit)}</strong></span>`
+                  : `<span class="text-[#40493D]">${t("quantity", "Qty")}: <strong class="text-[#181D17]">${detail.quantity} ${getTranslatedUnit(detail.unit)}</strong></span>
+                     <span class="text-[#40493D]">${t("price", "Price")}: <strong class="text-[#181D17]">₹${detail.price} / ${getTranslatedUnit(detail.unit)}</strong></span>`
+              }
+            </div>`
+          : ""
+      }
+      <ul class="mt-3 space-y-1.5">${reasonList}</ul>
+      <div class="mt-3 pt-3 border-t border-[#F1F5EB] grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-[10px] text-[#40493D]">
+        <div><div class="text-sm font-bold text-[#181D17]">${Math.round(match.commodity_score || 0)}</div>${t("commodityScore", "Commodity")}</div>
+        <div><div class="text-sm font-bold text-[#181D17]">${Math.round(match.quantity_score || 0)}</div>${t("quantityScore", "Quantity")}</div>
+        <div><div class="text-sm font-bold text-[#181D17]">${Math.round(match.location_score || 0)}</div>${t("locationScore", "Location")}</div>
+        <div><div class="text-sm font-bold text-[#181D17]">${Math.round(match.price_score || 0)}</div>${t("priceScore", "Price")}</div>
+        <div><div class="text-sm font-bold text-[#181D17]">${Math.round(match.grade_score || 0)}</div>${t("gradeScore", "Grade")}</div>
+      </div>
+      ${
+        mode === "buyer" && detail
+          ? `<a href="./browse-produce.html" class="btn-warm w-full mt-4 py-2.5 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5"><span>🤝</span> View & Make Offer</a>`
+          : ""
+      }
+    </div>`;
+}
+
+async function openListingMatches(listingId) {
+  const modal = document.getElementById("matchesModal");
+  const body = document.getElementById("matchesModalBody");
+  const title = document.getElementById("matchesModalTitle");
+  if (!modal || !body) return;
+
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert(t("sessionExpired", "Session expired. Please login again."));
+    window.location.href = "./login.html?role=farmer";
+    return;
+  }
+
+  title.textContent = "Matching Buyers";
+  body.innerHTML = `<p class="text-sm text-[#40493D] py-6 text-center">Finding suitable buyers for this listing…</p>`;
+  modal.classList.remove("hidden");
+
+  try {
+    const genRes = await fetch(
+      `${API_BASE_URL}/api/v1/matching/listings/${listingId}/generate`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      },
+    );
+    const genData = await genRes.json();
+    const matches = genRes.ok && genData.data ? genData.data : [];
+
+    if (!genRes.ok) {
+      body.innerHTML = `<p class="text-sm text-red-600 py-6 text-center">Could not generate matches. Please try again.</p>`;
+      return;
+    }
+
+    if (!matches.length) {
+      body.innerHTML = `
+        <div class="flex flex-col items-center py-12 text-center">
+          <div class="text-4xl mb-3">🤝</div>
+          <h3 class="text-lg font-bold text-[#181D17] mb-1">No suitable matches found yet</h3>
+          <p class="text-sm text-[#40493D]">No active buyer requirements match this listing right now. Check back later.</p>
+        </div>`;
+      return;
+    }
+
+    let cards = "";
+    for (const m of matches) {
+      let detail = null;
+      try {
+        const dRes = await fetch(
+          `${API_BASE_URL}/api/v1/demands/${m.demand_id}`,
+          { headers: { Authorization: `Bearer ${token}` } },
+        );
+        if (dRes.ok) detail = await dRes.json();
+      } catch (e) {
+        /* ignore enrichment errors */
+      }
+      cards += matchCardHtml(m, detail, "farmer");
+    }
+    body.innerHTML = `<div class="grid grid-cols-1 gap-4">${cards}</div>`;
+  } catch (err) {
+    console.error("Error generating listing matches:", err);
+    body.innerHTML = `<p class="text-sm text-red-600 py-6 text-center">Server error. Please check your connection and try again.</p>`;
+  }
+}
+
+async function openDemandMatches(demandId) {
+  const modal = document.getElementById("matchesModal");
+  const body = document.getElementById("matchesModalBody");
+  const title = document.getElementById("matchesModalTitle");
+  if (!modal || !body) return;
+
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert(t("sessionExpired", "Session expired. Please login again."));
+    window.location.href = "./login.html?role=buyer";
+    return;
+  }
+
+  title.textContent = "Matching Farmers";
+  body.innerHTML = `<p class="text-sm text-[#40493D] py-6 text-center">Finding suitable farmers for this requirement…</p>`;
+  modal.classList.remove("hidden");
+
+  try {
+    const genRes = await fetch(
+      `${API_BASE_URL}/api/v1/matching/demands/${demandId}/generate`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      },
+    );
+    const genData = await genRes.json();
+    const matches = genRes.ok && genData.data ? genData.data : [];
+
+    if (!genRes.ok) {
+      body.innerHTML = `<p class="text-sm text-red-600 py-6 text-center">Could not generate matches. Please try again.</p>`;
+      return;
+    }
+
+    if (!matches.length) {
+      body.innerHTML = `
+        <div class="flex flex-col items-center py-12 text-center">
+          <div class="text-4xl mb-3">🤝</div>
+          <h3 class="text-lg font-bold text-[#181D17] mb-1">No suitable matches found yet</h3>
+          <p class="text-sm text-[#40493D]">No active farmer listings match this requirement right now. Check back later.</p>
+        </div>`;
+      return;
+    }
+
+    let listings = [];
+    try {
+      const lRes = await fetch(
+        `${API_BASE_URL}/api/v1/listings?${new URLSearchParams({ status: "ACTIVE" }).toString()}`,
+        { headers: { Authorization: `Bearer ${token}` } },
+      );
+      if (lRes.ok) {
+        const arr = await lRes.json();
+        if (Array.isArray(arr)) listings = arr;
+      }
+    } catch (e) {
+      /* ignore enrichment errors */
+    }
+    const listingMap = {};
+    listings.forEach((l) => {
+      listingMap[String(l.id)] = l;
+    });
+
+    let cards = "";
+    matches.forEach((m) => {
+      const detail = listingMap[String(m.listing_id)] || null;
+      cards += matchCardHtml(m, detail, "buyer");
+    });
+    body.innerHTML = `<div class="grid grid-cols-1 gap-4">${cards}</div>`;
+  } catch (err) {
+    console.error("Error generating demand matches:", err);
+    body.innerHTML = `<p class="text-sm text-red-600 py-6 text-center">Server error. Please check your connection and try again.</p>`;
+  }
+}
+
+function closeMatchesModal() {
+  document.getElementById("matchesModal")?.classList.add("hidden");
+}
+
 // ============================================================
 // F20, F21 & F22 — OFFERS MANAGEMENT API INTEGRATION
 // ============================================================
@@ -888,7 +2682,7 @@ document.addEventListener("DOMContentLoaded", renderMyDemands);
 async function submitOffer(listingId, quantity, price, message = "") {
   const token = localStorage.getItem("token");
   if (!token) {
-    alert("Session expired. Please login again.");
+    alert(t("sessionExpired", "Session expired. Please login again."));
     window.location.href = "./login.html?role=buyer";
     return;
   }
@@ -915,10 +2709,11 @@ async function submitOffer(listingId, quantity, price, message = "") {
 
     const data = await res.json();
     if (res.ok) {
-      alert("Offer sent successfully to the farmer! 🎉");
+      alert(t("offerSent", "Offer sent successfully to the farmer! 🎉"));
       if (typeof closeOfferModal === "function") closeOfferModal();
+      if (typeof closeListingDrawer === "function") closeListingDrawer();
     } else {
-      alert(data.message || data.error || "Failed to send offer.");
+      alert(extractErrorMessage(data, t("offerSendFail", "Failed to send offer.")));
     }
   } catch (err) {
     console.error("Error sending offer:", err);
@@ -967,12 +2762,12 @@ async function renderBuyerOffers() {
                   ? "rejected"
                   : "pending"
             }">${item.status || "PENDING"}</span>
-            <h3 class="text-lg font-bold text-[#181D17] mt-2">${item.crop || "Produce Listing"}</h3>
-            <p class="text-xs text-[#40493D] mt-1">💬 ${item.message || "No additional message"}</p>
+            <h3 class="text-lg font-bold text-[#181D17] mt-2">${getTranslatedCropName(item.crop) || "Produce Listing"}</h3>
+            <p class="text-xs text-[#40493D] mt-1">💬 ${item.message || t("noMessage", "No additional message")}</p>
           </div>
           <div class="text-right gap-2">
             <p class="text-xs text-[#40493D]">Offered Qty: <strong class="text-[#181D17]">${item.quantity}</strong></p>
-            <p class="text-lg font-bold gradient-text-warm">₹${item.offered_price} / unit</p>
+            <p class="text-lg font-bold gradient-text-warm">₹${item.offered_price} / ${t("unit")}</p>
           </div>
         </div>
       `,
@@ -1028,14 +2823,14 @@ async function renderFarmerOffers() {
                   ? "accepted"
                   : "rejected"
             }">${item.status || "PENDING"}</span>
-            <h3 class="text-lg font-bold text-[#181D17] mt-2">${item.crop || "Produce Listing"}</h3>
-            <p class="text-xs text-[#40493D] mt-0.5">Offer from Buyer: <strong class="text-[#181D17]">${item.buyer_name || "Buyer"}</strong></p>
-            <p class="text-xs text-[#40493D] mt-1">💬 ${item.message || "No note from buyer"}</p>
+            <h3 class="text-lg font-bold text-[#181D17] mt-2">${getTranslatedCropName(item.crop) || "Produce Listing"}</h3>
+            <p class="text-xs text-[#40493D] mt-0.5">${t("offerFrom", "Offer from Buyer")}: <strong class="text-[#181D17]">${item.buyer_name || "Buyer"}</strong></p>
+            <p class="text-xs text-[#40493D] mt-1">💬 ${item.message || t("noNoteFromBuyer", "No note from buyer")}</p>
           </div>
           <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
             <div class="text-right">
               <p class="text-xs text-[#40493D]">Qty: <strong class="text-[#181D17]">${item.quantity}</strong></p>
-              <p class="text-lg font-bold brand-name">₹${item.offered_price} / unit</p>
+              <p class="text-lg font-bold brand-name">₹${item.offered_price} / ${t("unit")}</p>
             </div>
             ${
               item.status === "PENDING"
@@ -1075,10 +2870,18 @@ async function handleOfferAction(offerId, action) {
     );
 
     if (res.ok) {
-      alert(`Offer ${action}ed successfully!`);
+      alert(
+        action === "accept"
+          ? t("offerAccepted", "Offer accepted successfully!")
+          : t("offerRejected", "Offer rejected successfully!"),
+      );
       renderFarmerOffers();
     } else {
-      alert(`Failed to ${action} offer.`);
+      alert(
+        action === "accept"
+          ? t("offerAccepted", "Offer accepted successfully!")
+          : t("offerRejected", "Offer rejected successfully!"),
+      );
     }
   } catch (err) {
     console.error(`Error during offer ${action}:`, err);
@@ -1130,18 +2933,18 @@ async function renderFarmerOrders() {
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="status-badge accepted">${item.status || "CONFIRMED"}</span>
-              <span class="text-xs text-gray-500">Order #${item.id ? item.id.substring(0, 8) : "N/A"}</span>
+              <span class="text-xs text-gray-500">Order #${item.id ? String(item.id).slice(0, 8) : "N/A"}</span>
             </div>
-            <h3 class="text-lg font-bold text-[#181D17]">${item.crop || "Crop Harvest"}</h3>
-            <p class="text-xs text-[#40493D]">Buyer: <strong class="text-[#181D17]">${item.buyer_name || "Buyer Partner"}</strong></p>
+            <h3 class="text-lg font-bold text-[#181D17]">${getTranslatedCropName(item.crop) || "Crop Harvest"}</h3>
+            <p class="text-xs text-[#40493D]">${t("buyerLabel", "Buyer")}: <strong class="text-[#181D17]">${item.buyer_name || t("buyerPartner", "Buyer Partner")}</strong></p>
           </div>
           <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
             <div class="text-right">
-              <p class="text-xs text-[#40493D]">Agreed Qty: <strong class="text-[#181D17]">${item.quantity}</strong></p>
-              <p class="text-lg font-bold brand-name">Total: ₹${item.total_amount || item.quantity * item.agreed_price}</p>
+              <p class="text-xs text-[#40493D]">${t("agreedQty", "Agreed Qty")}: <strong class="text-[#181D17]">${item.quantity}</strong></p>
+              <p class="text-lg font-bold brand-name">${t("totalAmount", "Total")}: ₹${item.total_amount || item.quantity * item.agreed_price}</p>
             </div>
-            <button onclick="openOrderModal('${item.id}', '${item.crop}', '${item.quantity}', '${item.agreed_price}', '${item.total_amount || item.quantity * item.agreed_price}', '${item.buyer_name || "Buyer"}', '${item.status || "CONFIRMED"}')" class="px-4 py-2.5 bg-[#0D631B]/10 text-[#0D631B] text-xs font-bold rounded-xl hover:bg-[#0D631B] hover:text-white transition-all">
-              📄 View Summary
+            <button onclick="openOrderModal('${item.id}', '${getTranslatedCropName(item.crop)}', '${item.quantity}', '${item.agreed_price}', '${item.total_amount || item.quantity * item.agreed_price}', '${item.buyer_name || "Buyer"}', '${item.status || "CONFIRMED"}')" class="px-4 py-2.5 bg-[#0D631B]/10 text-[#0D631B] text-xs font-bold rounded-xl hover:bg-[#0D631B] hover:text-white transition-all">
+              📄 ${t("viewDetails")}
             </button>
           </div>
         </div>
@@ -1193,18 +2996,18 @@ async function renderBuyerOrders() {
           <div>
             <div class="flex items-center gap-2 mb-1">
               <span class="status-badge accepted">${item.status || "CONFIRMED"}</span>
-              <span class="text-xs text-gray-500">Order #${item.id ? item.id.substring(0, 8) : "N/A"}</span>
+              <span class="text-xs text-gray-500">Order #${item.id ? String(item.id).slice(0, 8) : "N/A"}</span>
             </div>
-            <h3 class="text-lg font-bold text-[#181D17]">${item.crop || "Crop Harvest"}</h3>
-            <p class="text-xs text-[#40493D]">Farmer: <strong class="text-[#181D17]">${item.farmer_name || "Farmer Partner"}</strong></p>
+            <h3 class="text-lg font-bold text-[#181D17]">${getTranslatedCropName(item.crop) || "Crop Harvest"}</h3>
+            <p class="text-xs text-[#40493D]">${t("farmerLabel", "Farmer")}: <strong class="text-[#181D17]">${item.farmer_name || t("farmerPartner", "Farmer Partner")}</strong></p>
           </div>
           <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
             <div class="text-right">
-              <p class="text-xs text-[#40493D]">Agreed Qty: <strong class="text-[#181D17]">${item.quantity}</strong></p>
-              <p class="text-lg font-bold gradient-text-warm">Total: ₹${item.total_amount || item.quantity * item.agreed_price}</p>
+              <p class="text-xs text-[#40493D]">${t("agreedQty", "Agreed Qty")}: <strong class="text-[#181D17]">${item.quantity}</strong></p>
+              <p class="text-lg font-bold gradient-text-warm">${t("totalAmount", "Total")}: ₹${item.total_amount || item.quantity * item.agreed_price}</p>
             </div>
-            <button onclick="openOrderModal('${item.id}', '${item.crop}', '${item.quantity}', '${item.agreed_price}', '${item.total_amount || item.quantity * item.agreed_price}', '${item.farmer_name || "Farmer"}', '${item.status || "CONFIRMED"}')" class="px-4 py-2.5 bg-[#75584D]/10 text-[#75584D] text-xs font-bold rounded-xl hover:bg-[#75584D] hover:text-white transition-all">
-              📄 View Summary
+            <button onclick="openOrderModal('${item.id}', '${getTranslatedCropName(item.crop)}', '${item.quantity}', '${item.agreed_price}', '${item.total_amount || item.quantity * item.agreed_price}', '${item.farmer_name || "Farmer"}', '${item.status || "CONFIRMED"}')" class="px-4 py-2.5 bg-[#75584D]/10 text-[#75584D] text-xs font-bold rounded-xl hover:bg-[#75584D] hover:text-white transition-all">
+              📄 ${t("viewDetails")}
             </button>
           </div>
         </div>
@@ -1232,17 +3035,17 @@ function openOrderModal(id, crop, qty, price, total, partner, status) {
       <p class="text-xs text-[#40493D] mt-1">Deal finalized between both parties</p>
     </div>
     <div class="grid grid-cols-2 gap-2 text-xs border-b border-[#CDBDB4]/50 pb-2">
-      <span class="text-[#40493D]">Order Reference:</span>
+      <span class="text-[#40493D]">${t("orderRef", "Order Reference")}:</span>
       <span class="font-semibold text-right text-[#181D17]">${id ? id.substring(0, 12) : "CR-8921"}...</span>
-      <span class="text-[#40493D]">Status:</span>
+      <span class="text-[#40493D]">${t("status", "Status")}:</span>
       <span class="status-badge accepted ml-auto">${status}</span>
     </div>
     <div class="grid grid-cols-2 gap-2 text-xs border-b border-[#CDBDB4]/50 py-2">
-      <span class="text-[#40493D]">Crop Commodity:</span>
+      <span class="text-[#40493D]">${t("cropCommodity", "Crop Commodity")}:</span>
       <span class="font-semibold text-right text-[#181D17]">${crop}</span>
-      <span class="text-[#40493D]">Agreed Quantity:</span>
+      <span class="text-[#40493D]">${t("agreedQty", "Agreed Quantity")}:</span>
       <span class="font-semibold text-right text-[#181D17]">${qty}</span>
-      <span class="text-[#40493D]">Agreed Unit Price:</span>
+      <span class="text-[#40493D]">${t("agreedPrice", "Agreed Unit Price")}:</span>
       <span class="font-semibold text-right text-[#181D17]">₹${price}</span>
     </div>
     <div class="flex justify-between items-center pt-3 text-base font-bold brand-name">
@@ -1272,7 +3075,7 @@ async function loadUserProfile() {
 
   const token = localStorage.getItem("token");
   if (!token) {
-    alert("Session expired. Please login again.");
+    alert(t("sessionExpired", "Session expired. Please login again."));
     window.location.href = "./login.html";
     return;
   }
@@ -1299,8 +3102,27 @@ async function loadUserProfile() {
       document.getElementById("profileAddress").value =
         data.village || data.address || "";
 
+      const businessField = document.getElementById("businessNameField");
+      const businessInput = document.getElementById("profileBusiness");
+      const businessTypeInput = document.getElementById("profileBusinessType");
+      if (getTokenRole() === "buyer") {
+        if (businessField) businessField.classList.remove("hidden");
+        if (businessInput) businessInput.value = data.business_name || "";
+        if (businessTypeInput)
+          businessTypeInput.value = data.business_type || "";
+      }
+
       const nameDisplay = document.getElementById("profileNameDisplay");
       if (nameDisplay) nameDisplay.textContent = data.name || "User Account";
+
+      const profileAvatar = document.getElementById("profileAvatar");
+      const profileRoleBadge = document.getElementById("profileRoleBadge");
+      const displayName = data.business_name || data.name || "K";
+      if (profileAvatar) profileAvatar.textContent = displayName.charAt(0).toUpperCase();
+      if (profileRoleBadge) {
+        profileRoleBadge.textContent =
+          getTokenRole() === "buyer" ? "VERIFIED BUYER" : "VERIFIED FARMER";
+      }
     }
   } catch (err) {
     console.error("Error loading profile:", err);
@@ -1311,7 +3133,433 @@ document
   .getElementById("profileForm")
   ?.addEventListener("submit", async function (e) {
     e.preventDefault();
-    alert("Profile updated successfully!");
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      alert(t("sessionExpired", "Session expired. Please login again."));
+      window.location.href = "./login.html";
+      return;
+    }
+
+    const name = document.getElementById("profileName").value.trim();
+    const state = document.getElementById("profileState").value.trim();
+    const district = document.getElementById("profileDistrict").value.trim();
+
+    if (!name || !state || !district) {
+      alert(t("nameStateDistRequired", "Name, state and district are required."));
+      return;
+    }
+
+    const role = getTokenRole();
+    let endpoint = `${API_BASE_URL}/api/v1/farmers/me`;
+    const payload = { name, state, district };
+
+    if (role === "buyer") {
+      endpoint = `${API_BASE_URL}/api/v1/buyers/me`;
+      const businessName = document
+        .getElementById("profileBusiness")
+        ?.value.trim();
+      const businessType = document
+        .getElementById("profileBusinessType")
+        ?.value.trim();
+      if (!businessName) {
+        alert(t("businessNameRequired", "Business name is required for buyers."));
+        return;
+      }
+      payload.business_name = businessName;
+      payload.business_type = businessType;
+    }
+
+    try {
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Saving...";
+      submitBtn.disabled = true;
+
+      const res = await fetch(endpoint, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+
+      if (res.ok) {
+        alert(t("profileUpdated", "Profile updated successfully! ✅"));
+        loadUserProfile();
+      } else {
+        alert(
+          extractErrorMessage(data, "Failed to update profile. Please try again."),
+        );
+      }
+    } catch (err) {
+      console.error("Error updating profile:", err);
+      alert(t("serverError", "Server error. Please check your connection and try again."));
+    }
   });
 
 document.addEventListener("DOMContentLoaded", loadUserProfile);
+
+// ============================================================
+// FARMER DASHBOARD — STATS, SIDEBAR & RECENT ACTIVITY
+// ============================================================
+async function loadFarmerDashboard() {
+  const nameEl = document.getElementById("farmerName");
+  if (!nameEl) return;
+
+  const token = localStorage.getItem("token");
+  if (!token) {
+    nameEl.textContent = "Guest Farmer";
+    return;
+  }
+
+  const authedFetch = (url) =>
+    fetch(`${API_BASE_URL}${url}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+  try {
+    const meRes = await authedFetch("/api/v1/auth/me");
+    const me = meRes.ok ? await meRes.json() : null;
+    if (me && me.name) {
+      nameEl.textContent = me.name;
+    }
+  } catch (err) {
+    console.error("Error loading farmer profile:", err);
+  }
+
+  try {
+    const [listingsRes, offersRes, ordersRes] = await Promise.all([
+      authedFetch("/api/v1/listings/my"),
+      authedFetch("/api/v1/offers/farmer"),
+      authedFetch("/api/v1/orders/farmer"),
+    ]);
+
+    const listings = listingsRes.ok ? await listingsRes.json() : [];
+    const offers = offersRes.ok ? await offersRes.json() : [];
+    const orders = ordersRes.ok ? await ordersRes.json() : [];
+
+    const activeListings = Array.isArray(listings)
+      ? listings.filter((l) => l.status === "ACTIVE").length
+      : 0;
+    const pendingOffers = Array.isArray(offers)
+      ? offers.filter((o) => o.status === "PENDING").length
+      : 0;
+    const orderCount = Array.isArray(orders) ? orders.length : 0;
+    let revenue = 0;
+    if (Array.isArray(orders)) {
+      orders.forEach((o) => {
+        revenue += parseFloat(o.total_amount || 0) || 0;
+      });
+    }
+
+    const statActive = document.getElementById("statActive");
+    const statOffers = document.getElementById("statOffers");
+    const statOrders = document.getElementById("statOrders");
+    const statRevenue = document.getElementById("statRevenue");
+    if (statActive) statActive.textContent = activeListings;
+    if (statOffers) statOffers.textContent = pendingOffers;
+    if (statOrders) statOrders.textContent = orderCount;
+    if (statRevenue)
+      statRevenue.textContent = `₹${revenue.toLocaleString("en-IN")}`;
+
+    const recent = document.getElementById("recentActivity");
+    if (recent) {
+      if (
+        activeListings === 0 &&
+        pendingOffers === 0 &&
+        orderCount === 0
+      ) {
+        return;
+      }
+      const items = [];
+      if (Array.isArray(listings)) {
+        listings.slice(0, 3).forEach((l) => {
+          items.push(`
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#F4F8F0]/50">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0D631B] to-[#2E7D32] flex items-center justify-center text-white text-lg">🌾</div>
+              <div class="flex-1">
+                <p class="font-medium text-[#181D17]">${getTranslatedCropName(l.crop) || "Crop"} ${t("listedOnMarketplace", "listed on marketplace")} ${l.status === "ACTIVE" ? "" : `(${l.status})`}</p>
+                <p class="text-sm text-[#40493D]">${l.quantity} ${l.unit} at ₹${l.price}</p>
+              </div>
+            </div>`);
+        });
+      }
+      if (Array.isArray(orders)) {
+        orders.slice(0, 2).forEach((o) => {
+          items.push(`
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-[#F4F8F0]/50">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center text-white text-lg">📦</div>
+              <div class="flex-1">
+                <p class="font-medium text-[#181D17]">${t("orderFor", "Order for")} ${getTranslatedCropName(o.crop) || "produce"} ${o.status || "CONFIRMED"}</p>
+                <p class="text-sm text-[#40493D]">${o.buyer_name || "Buyer"} • ₹${o.total_amount || ""}</p>
+              </div>
+            </div>`);
+        });
+      }
+      recent.innerHTML = items.join("");
+    }
+  } catch (err) {
+    console.error("Error loading farmer dashboard stats:", err);
+  }
+}
+
+// ============================================================
+// BUYER DASHBOARD — STATS, SIDEBAR & FEATURED LISTINGS
+// ============================================================
+async function loadBuyerDashboard() {
+  const featured = document.getElementById("featuredListings");
+  if (!featured && !document.getElementById("statPendingOffers")) return;
+
+  const token = localStorage.getItem("token");
+
+  const authedFetch = (url) =>
+    fetch(`${API_BASE_URL}${url}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token ? `Bearer ${token}` : "",
+      },
+    });
+
+  try {
+    if (token) {
+      const [offersRes, ordersRes] = await Promise.all([
+        authedFetch("/api/v1/offers/buyer"),
+        authedFetch("/api/v1/orders/buyer"),
+      ]);
+
+      const offers = offersRes.ok ? await offersRes.json() : [];
+      const orders = ordersRes.ok ? await ordersRes.json() : [];
+
+      const pendingOffers = Array.isArray(offers)
+        ? offers.filter((o) => o.status === "PENDING").length
+        : 0;
+      const acceptedDeals = Array.isArray(orders)
+        ? orders.filter((o) => (o.status || "ACCEPTED") !== "REJECTED").length
+        : 0;
+      const deliveries = Array.isArray(orders)
+        ? orders.filter((o) => (o.status || "").toUpperCase() !== "COMPLETED")
+            .length
+        : 0;
+
+      const el1 = document.getElementById("statPendingOffers");
+      const el2 = document.getElementById("statAcceptedDeals");
+      const el3 = document.getElementById("statDeliveries");
+      if (el1) el1.textContent = pendingOffers;
+      if (el2) el2.textContent = acceptedDeals;
+      if (el3) el3.textContent = deliveries;
+    }
+  } catch (err) {
+    console.error("Error loading buyer dashboard stats:", err);
+  }
+
+  if (featured) {
+    try {
+      const res = await fetch(
+        `${API_BASE_URL}/api/v1/listings?${new URLSearchParams({ status: "ACTIVE" }).toString()}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token ? `Bearer ${token}` : "",
+          },
+        },
+      );
+      const data = res.ok ? await res.json() : [];
+      if (Array.isArray(data) && data.length > 0) {
+        featured.innerHTML = data
+          .slice(0, 6)
+          .map(
+            (item) => `
+          <div class="min-w-[260px] max-w-[280px] glass-card rounded-xl border border-[#E0E4DA]/60 p-4 flex flex-col justify-between hover:-translate-y-1 hover:shadow-lg transition-all duration-300 animate-fade-in-up">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-xs font-semibold rounded bg-green-100 text-[#0D631B] mb-2">${t("verifiedFarmer", "Verified Farmer")}</span>
+              <h4 class="font-bold text-[#181D17] text-base">${getTranslatedCropName(item.crop) || t("freshCrop", "Fresh Crop")}</h4>
+              <p class="text-xs text-[#40493D] mb-3">${getTranslatedLocation(item.district, item.state)}</p>
+              <div class="space-y-1 text-sm">
+                <p class="text-[#40493D]">${t("qty", "Qty")}: <strong class="text-[#181D17]">${item.quantity} ${getTranslatedUnit(item.unit)}</strong></p>
+                <p class="text-[#75584D] font-bold text-base">₹${item.price} / ${getTranslatedUnit(item.unit)}</p>
+              </div>
+            </div>
+            <a href="./browse-produce.html" class="text-center w-full mt-4 py-2 bg-[#75584D] text-white text-xs font-bold rounded hover:bg-[#5c443b] transition-colors">${t("viewDetails")}</a>
+          </div>`,
+          )
+          .join("");
+      } else {
+        featured.innerHTML = `<p class="text-sm text-[#40493D]">${t("noProduceNow", "No produce available right now. Check back soon! 🌱")}</p>`;
+      }
+    } catch (err) {
+      console.error("Error loading featured listings:", err);
+    }
+  }
+}
+
+// ============================================================
+// MOBILE MENU + LOGOUT (shared across app pages)
+// ============================================================
+function setupAppChrome() {
+  const menuBtn = document.getElementById("mobileMenuBtn");
+  const overlay = document.getElementById("mobileOverlay");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  function toggleMenu(open) {
+    if (!mobileMenu || !overlay) return;
+    mobileMenu.classList.toggle("hidden", !open);
+    overlay.classList.toggle("hidden", !open);
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  menuBtn?.addEventListener("click", () =>
+    toggleMenu(mobileMenu.classList.contains("hidden")),
+  );
+  overlay?.addEventListener("click", () => toggleMenu(false));
+  mobileMenu?.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") toggleMenu(false);
+  });
+
+  const wireLogout = (sel) => {
+    const el = document.querySelector(sel);
+    el?.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.clear();
+      window.location.href = "./login.html";
+    });
+  };
+  ["#sidebarLogout", "#mobileLogout", "#buyerLogout"].forEach(wireLogout);
+}
+
+// ============================================================
+// SHARED SIDEBAR HYDRATION (all app pages)
+// ============================================================
+async function hydrateSidebar() {
+  const nameEl = document.getElementById("sidebarName");
+  const userNameEl = document.getElementById("sidebarUserName");
+  const roleEl = document.getElementById("sidebarUserRole");
+  const avatarEl = document.getElementById("sidebarAvatar");
+  const emailEl = document.getElementById("sidebarEmail");
+  if (!nameEl && !userNameEl && !avatarEl) return;
+
+  const token = localStorage.getItem("token");
+  if (!token) {
+    document.querySelectorAll(".sidebar-logout").forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        localStorage.clear();
+        window.location.href = "./login.html";
+      });
+    });
+    return;
+  }
+
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/v1/auth/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const me = res.ok ? await res.json() : null;
+    if (me) {
+      // Cache profile locally so drawers can auto-fill state/district immediately
+      localStorage.setItem("krishisetu_profile", JSON.stringify(me));
+
+      const role = getTokenRole();
+      const displayName =
+        me.business_name || me.name || (role === "buyer" ? "Buyer" : "Farmer");
+      if (nameEl) nameEl.textContent = displayName;
+      if (userNameEl) userNameEl.textContent = displayName;
+      if (avatarEl)
+        avatarEl.textContent = (displayName || "K").charAt(0).toUpperCase();
+      if (roleEl)
+        roleEl.textContent =
+          role === "buyer" ? t("buyerAccount") : t("farmerAccount");
+      if (emailEl) emailEl.textContent = me.phone ? `+91 ${me.phone}` : "";
+    }
+  } catch (err) {
+    console.error("Error hydrating sidebar:", err);
+  }
+
+  document.querySelectorAll(".sidebar-logout").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.clear();
+      window.location.href = "./login.html";
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initLanguageSwitchers();
+  hydrateSidebar();
+  setupAppChrome();
+  loadFarmerDashboard();
+  loadBuyerDashboard();
+});
+
+// ============================================================
+// MARKET INTELLIGENCE — LATEST REPORTED MANDI PRICES (index.html)
+// ============================================================
+async function loadMarketPrices() {
+  const grid = document.getElementById("marketPriceGrid");
+  if (!grid) return;
+
+  renderSkeletonCards("marketPriceGrid", 3);
+
+  const commodities = ["Wheat", "Potato", "Tomato", "Onion", "Paddy(Common)"];
+
+  let html = "";
+  for (const commodity of commodities) {
+    let info = null;
+    try {
+      const res = await fetch(
+        `${API_BASE_URL}/api/v1/market/prices/intelligence?${new URLSearchParams({ commodity })}`,
+      );
+      const data = await res.json();
+      if (res.ok && data && data.data) info = data.data;
+    } catch (err) {
+      console.error("Error loading market price for", commodity, err);
+    }
+
+    if (info) {
+      const freshnessLabel =
+        info.freshness === "Today" || info.freshness === "1 day old"
+          ? t("recentLabel", "Recent")
+          : info.freshness || "—";
+      const cropName = getTranslatedCropName(info.commodity || commodity);
+      html += `
+        <div class="premium-card rounded-xl p-6" style="--card-accent: linear-gradient(90deg,#4e99d9,#9cc7ee);--card-glow:rgba(78,153,217,0.14);--card-shadow:rgba(78,153,217,0.16);">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold text-[#1E1E1E]">${cropName}</h3>
+            <span class="inline-block px-2.5 py-0.5 text-[10px] font-semibold rounded-full bg-blue-100 text-[#2E6BA6]">${freshnessLabel}</span>
+          </div>
+          <p class="text-sm text-[#40493D] mt-1">${t("reportedPriceLabel", "Reported")} ₹<strong class="text-[#181D17]">${info.current_price ? info.current_price.toLocaleString("en-IN") : "—"}</strong> / ${t("quintalUnit", "quintal")}</p>
+          <p class="text-xs text-[#40493D] mt-2">${t("rangeLabel", "Range")}: ₹${info.min_price ? info.min_price.toLocaleString("en-IN") : "—"} – ₹${info.max_price ? info.max_price.toLocaleString("en-IN") : "—"}</p>
+          <div class="mt-4 pt-3 border-t border-[#E0E4DA]/60 text-[11px] text-[#40493D] space-y-1">
+            <p>📅 ${t("reportedOnLabel", "Reported on")}: ${info.reported_date || "—"}</p>
+            <p>🏪 ${t("sourceLabel", "Source")}: ${info.source || "Mandi"}</p>
+          </div>
+        </div>`;
+    } else {
+      html += `
+        <div class="premium-card rounded-xl p-6 text-center" style="--card-accent: linear-gradient(90deg,#4e99d9,#9cc7ee);--card-glow:rgba(78,153,217,0.14);--card-shadow:rgba(78,153,217,0.16);">
+          <h3 class="text-lg font-semibold text-[#1E1E1E]">${getTranslatedCropName(commodity)}</h3>
+          <p class="text-sm text-[#40493D] mt-2">${t("noReportYet", "Latest report not available yet.")}</p>
+        </div>`;
+    }
+  }
+
+  grid.innerHTML = html;
+}
+
+document.addEventListener("DOMContentLoaded", loadMarketPrices);
